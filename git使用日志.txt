@@ -1,0 +1,7 @@
+教程及文件：
+http://blog.csdn.net/chinaonlyqiu/article/details/8826767
+http://www.eoeandroid.com/thread-274556-1-1.html
+https://code.google.com/p/msysgit/downloads/list
+
+tortoisegit 记住密码：
+http://blog.csdn.net/xiangzi1113/article/details/9213667
