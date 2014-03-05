@@ -13,4 +13,7 @@ vs使用git：
 http://www.cnblogs.com/oec2003/archive/2012/11/13/2768860.html
 
 3，去除git版本控制：删除隐藏文件夹.git
+
+
+
 	
