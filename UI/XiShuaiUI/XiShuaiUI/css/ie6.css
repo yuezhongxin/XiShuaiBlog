@@ -1,0 +1,8 @@
+/*IE6 FIX 20120124*/
+@charset "utf-8";
+.clearfix {height:1%;}
+body {background:#f2f2f2 url(../images/body_bg.png) repeat-y 50% 0;position:absolute;top:0;left:0;margin:0 auto;font:12px/22px 'Microsoft Yahei','\5b8b\4f53',微软雅黑, Arial, Lucida Grande, Tahoma, sans-serif;color:#131313;}
+#header{height:150px;}
+#navmenu ul {position:absolute;top:0;left:0;float:left;padding:0 2px 0 0;}
+.htabs_art ul.cooltab_nav li a{width:89px;}
+#shangxia{display:none;}

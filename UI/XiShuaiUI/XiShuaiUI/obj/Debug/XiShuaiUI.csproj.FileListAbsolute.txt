@@ -1,0 +1,5 @@
+E:\我的文档\XiShuai\UI\XiShuaiUI\XiShuaiUI\bin\XiShuaiUI.dll
+E:\我的文档\XiShuai\UI\XiShuaiUI\XiShuaiUI\bin\XiShuaiUI.pdb
+E:\我的文档\XiShuai\UI\XiShuaiUI\XiShuaiUI\obj\Debug\XiShuaiUI.csprojResolveAssemblyReference.cache
+E:\我的文档\XiShuai\UI\XiShuaiUI\XiShuaiUI\obj\Debug\XiShuaiUI.dll
+E:\我的文档\XiShuai\UI\XiShuaiUI\XiShuaiUI\obj\Debug\XiShuaiUI.pdb

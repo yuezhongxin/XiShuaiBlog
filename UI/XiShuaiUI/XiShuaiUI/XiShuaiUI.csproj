@@ -57,18 +57,134 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="7-white.html" />
+    <Content Include="css\ie6.css" />
+    <Content Include="details.html" />
+    <Content Include="list.html" />
+    <Content Include="tags.html" />
+    <Content Include="images\0bg.png" />
+    <Content Include="images\234543.png" />
+    <Content Include="images\4444444444.png" />
+    <Content Include="images\9newAirtl_icon.png" />
+    <Content Include="images\bg.GIF" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\blockquote.gif" />
+    <Content Include="images\body_bg - 副本.png" />
+    <Content Include="images\body_bg.png" />
+    <Content Include="images\body_bg00.png" />
+    <Content Include="images\body_bg1.png" />
+    <Content Include="images\body_bg9.png" />
+    <Content Include="images\b_search.png" />
+    <Content Include="images\comment-text.gif" />
+    <Content Include="images\contact.png" />
+    <Content Include="images\content_top.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\gravatar.png" />
+    <Content Include="images\headerbg.png" />
+    <Content Include="images\header_img - 副本.png" />
+    <Content Include="images\header_img.png" />
+    <Content Include="images\header_menu_list.gif" />
+    <Content Include="images\home_icon.png" />
+    <Content Include="images\huadong.png" />
+    <Content Include="images\links_default.ico" />
+    <Content Include="images\list.png" />
+    <Content Include="images\list_desc.png" />
+    <Content Include="images\LOGO-PSD\字体下载.txt" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\navbg.png" />
+    <Content Include="images\nav_h.png" />
+    <Content Include="images\newAirtl_icon - 副本.png" />
+    <Content Include="images\rss.jpg" />
+    <Content Include="images\rss.png" />
+    <Content Include="images\rss_icon.jpg" />
+    <Content Include="images\searchbg.png" />
+    <Content Include="images\shortcode\bell.png" />
+    <Content Include="images\shortcode\buy.png" />
+    <Content Include="images\shortcode\clipboard.png" />
+    <Content Include="images\shortcode\dlbutton.png" />
+    <Content Include="images\shortcode\noway.png" />
+    <Content Include="images\smilies\icon_arrow.gif" />
+    <Content Include="images\smilies\icon_biggrin.gif" />
+    <Content Include="images\smilies\icon_confused.gif" />
+    <Content Include="images\smilies\icon_cool.gif" />
+    <Content Include="images\smilies\icon_cry.gif" />
+    <Content Include="images\smilies\icon_eek.gif" />
+    <Content Include="images\smilies\icon_evil.gif" />
+    <Content Include="images\smilies\icon_exclaim.gif" />
+    <Content Include="images\smilies\icon_idea.gif" />
+    <Content Include="images\smilies\icon_lol.gif" />
+    <Content Include="images\smilies\icon_mad.gif" />
+    <Content Include="images\smilies\icon_mrgreen.gif" />
+    <Content Include="images\smilies\icon_neutral.gif" />
+    <Content Include="images\smilies\icon_question.gif" />
+    <Content Include="images\smilies\icon_razz.gif" />
+    <Content Include="images\smilies\icon_redface.gif" />
+    <Content Include="images\smilies\icon_rolleyes.gif" />
+    <Content Include="images\smilies\icon_sad.gif" />
+    <Content Include="images\smilies\icon_smile.gif" />
+    <Content Include="images\smilies\icon_surprised.gif" />
+    <Content Include="images\smilies\icon_twisted.gif" />
+    <Content Include="images\smilies\icon_wink.gif" />
+    <Content Include="images\smilies\old\icon_arrow.gif" />
+    <Content Include="images\smilies\old\icon_biggrin.gif" />
+    <Content Include="images\smilies\old\icon_confused.gif" />
+    <Content Include="images\smilies\old\icon_cool.gif" />
+    <Content Include="images\smilies\old\icon_cry.gif" />
+    <Content Include="images\smilies\old\icon_eek.gif" />
+    <Content Include="images\smilies\old\icon_evil.gif" />
+    <Content Include="images\smilies\old\icon_exclaim.gif" />
+    <Content Include="images\smilies\old\icon_idea.gif" />
+    <Content Include="images\smilies\old\icon_lol.gif" />
+    <Content Include="images\smilies\old\icon_mad.gif" />
+    <Content Include="images\smilies\old\icon_mrgreen.gif" />
+    <Content Include="images\smilies\old\icon_neutral.gif" />
+    <Content Include="images\smilies\old\icon_question.gif" />
+    <Content Include="images\smilies\old\icon_razz.gif" />
+    <Content Include="images\smilies\old\icon_redface.gif" />
+    <Content Include="images\smilies\old\icon_rolleyes.gif" />
+    <Content Include="images\smilies\old\icon_sad.gif" />
+    <Content Include="images\smilies\old\icon_smile.gif" />
+    <Content Include="images\smilies\old\icon_surprised.gif" />
+    <Content Include="images\smilies\old\icon_twisted.gif" />
+    <Content Include="images\smilies\old\icon_wink.gif" />
+    <Content Include="images\space.gif" />
+    <Content Include="images\sprites.gif" />
+    <Content Include="images\sprites.png" />
+    <Content Include="images\top_strip.png" />
+    <Content Include="images\zijin.png" />
+    <Content Include="js\archives.js" />
+    <Content Include="js\jquery.cycle.all.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery_muchun.js" />
+    <Content Include="js\my_quicktags.js" />
+    <Content Include="js\PNG.js" />
+    <Content Include="search.html" />
     <Content Include="Web.config" />
+    <Content Include="index.html" />
+    <Content Include="css\style.css" />
+    <Content Include="_footer.html" />
+    <Content Include="_header.html" />
+    <Content Include="_nav.html" />
+    <Content Include="_shangxia.html" />
+    <Content Include="_sider1.html" />
+    <Content Include="_sider2.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\LOGO-PSD\logo.psd" />
+    <Content Include="images\smilies\old\qq-smilies-square.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\smilies\qq\" />
+    <Folder Include="uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
