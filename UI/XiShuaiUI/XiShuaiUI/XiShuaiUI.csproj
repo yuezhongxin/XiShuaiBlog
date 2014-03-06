@@ -57,9 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="7-white.html" />
+    <Content Include="404.html" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />
+    <Content Include="images\xishuai.png" />
     <Content Include="links.html" />
     <Content Include="list.html" />
     <Content Include="tags.html" />
