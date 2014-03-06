@@ -2,10 +2,10 @@
 /*
 Theme Name: Muchun
 Theme URI: www.muchun.net
-Description: 主题作者 <a href="http://www.muchun.net">木春</a>，QQ：995333499，主题更新及Bug反馈请到 <a href="http://995333499.qzone.qq.com" target="_blank">QQ空间</a>.
-Author:<a href="http://www.muchun.net">木春</a>
+Description: 主题作者 <a href="http://www.yuezhongxin.com/">蟋蟀</a>，QQ：624541997，主题更新及Bug反馈请到 <a href="http://624541997.qzone.qq.com" target="_blank">QQ空间</a>.
+Author:<a href="http://www.yuezhongxin.com/">蟋蟀</a>
 Version: V1.0
-Tags: fixed width, two columns, widgets, blue, custom-header, custom-background, Muchun, 木春
+Tags: fixed width, two columns, widgets, blue, custom-header, custom-background, Muchun, 蟋蟀
 */
 /*=== Setup ===*/
 
@@ -358,8 +358,8 @@ ol.commentlist li div.floor{ float:right;color:#bbb}
 #top_strip p a { text-decoration:underline; padding:0 4px; }
 #top_strip p a:hover { text-decoration:none; }
 
-.logo { float:left; padding-top:40px ;width:184px; }
-.yiyu { float:left; padding-top:40px ;padding-left:20px ;width:200px; }
+.logo { float:left; padding-top:40px ; }
+.yiyu { float:left; padding-top:42px ;padding-left:20px ;width:200px; }
 .yiyu p { font-size:12px;color:#FFFFFF;}
 /*--顶部公告栏--*/
 .poptip{float:left;position: relative;top: 35px;left:50px;width: 230px;height: 35px;padding: 8px;line-height: 16px;color: #DB7C22;font-size: 12px;background-color: #FFFCEF;border: solid 1px #FFBB76;border-radius: 2px;box-shadow: 0 0 3px #ddd;}

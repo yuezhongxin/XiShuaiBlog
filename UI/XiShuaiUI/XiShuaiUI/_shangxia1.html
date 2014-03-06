@@ -1,0 +1,13 @@
+﻿<div id="shang" title="↑ 返回顶部"></div>
+<div id="xia" title="↓ 移至底部"></div>
+<div id="myrss" title="Hello，欢迎使用邮箱订阅博客。你，一定会喜欢我！" onclick="window.open('http://www.yuezhongxin.com/feed','_blank');"></div>
+<script>
+    //updown
+    $(function () {
+        $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $("html") : $("body")) : $("html,body");
+        $("#shang").mouseover(function () { up() }).mouseout(function () { clearTimeout(fq) }).click(function () { $body.animate({ scrollTop: 0 }, 400) });
+        $("#xia").mouseover(function () { dn() }).mouseout(function () { clearTimeout(fq) }).click(function () { $body.animate({ scrollTop: $(document).height() }, 400) });
+    });
+    function up() { $wd = $(window); $wd.scrollTop($wd.scrollTop() - 1); fq = setTimeout("up()", 50) };
+    function dn() { $wd = $(window); $wd.scrollTop($wd.scrollTop() + 1); fq = setTimeout("dn()", 50) };
+</script>
