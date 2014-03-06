@@ -60,6 +60,7 @@
     <Content Include="7-white.html" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />
+    <Content Include="links.html" />
     <Content Include="list.html" />
     <Content Include="tags.html" />
     <Content Include="images\0bg.png" />
