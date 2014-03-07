@@ -14,19 +14,18 @@ $(function () {
     //images maxWidth
     $('.post-content img').each(function () { var maxWidth = 580; var maxHeight = 5000; var ratio = 0; var width = $(this).width(); var height = $(this).height(); if (width > maxWidth) { ratio = maxWidth / width; $(this).css("width", maxWidth); height = height * ratio; $(this).css("height", height * ratio); } if (height > maxHeight) { ratio = maxHeight / height; $(this).css("height", maxHeight); width = width * ratio; $(this).css("width", width * ratio); } });
 });		//Don't delete this line
+
 //sidebar scroll
-jQuery(document).ready(function ($) {
-    if (!isie6()) {
-        var rollStart = $('#rollstart'), rollSet = $('.feed-mail,.float,#tuijian');
-        rollStart.before('<div class="hcms_rollbox"></div>');
-        var offset = rollStart.offset(), objWindow = $(window), rollBox = rollStart.prev();
-        if (objWindow.width() > 960) {
-            objWindow.scroll(function () {
-                if (objWindow.scrollTop() > offset.top) {
-                    if (rollBox.html(null)) { rollSet.clone().prependTo('.hcms_rollbox') } rollBox.show().stop().animate({ top: 0, paddingTop: 15 }, 400)
-                } else { rollBox.hide().stop().animate({ top: 0 }, 400) }
-            })
+$(function () {
+    $(window).scroll(function () {
+        var ref_min = $("#rollstart")[0];
+        if (!ref_min) return;
+        var scroll_top = $(window).scrollTop();
+        var ref_height_min = ref_min.offsetTop + $(".con_box2")[0].offsetHeight;
+        if (scroll_top > ref_height_min) {
+            $(".con_box2").addClass("hot_box2");
+        } else {
+            $(".con_box2").removeClass("hot_box2");
         }
-    }
-    function isie6() { if ($.browser.msie) { if ($.browser.version == "6.0") return true; } return false; }
+    });
 });

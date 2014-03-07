@@ -70,6 +70,13 @@ strong.logo a, strong.logo a:hover {background:url(../images/logo.jpg) no-repeat
 .hot_box ul{padding:10px;}
 .hot_box ul li {border-bottom: 1px dotted #CCC;padding:3px 0;}
 .hot_box ul li a.title {padding:0 0 0 15px; background:url(../images/newAirtl_icon.png) no-repeat 3px 50%;}
+.con_box2{border:1px #dbdbdb solid;background:#fff;margin-bottom:10px;}
+.con_box2 h2 {color:#F9C006;font-weight:bold;font-size:14px;width:104px;text-align:center;}
+.con_box2 h3{color:#333333;font-weight:bold;font-size:16px;height:32px;line-height:32px;padding:0 10px;}
+.hot_box2{position:fixed;top:10px;}
+.hot_box2 ul{padding:10px;}
+.hot_box2 ul li {border-bottom: 1px dotted #CCC;padding:3px 0;}
+.hot_box2 ul li a.title {padding:0 0 0 15px; background:url(../images/newAirtl_icon.png) no-repeat 3px 50%;}
 /*--title&list--*/
 .resouse_artile {width:400px;position:relative;}
 .resouse_artile h2 {border-bottom:1px #dbdbdb solid;height:30px;line-height:30px;width:100%;text-align:left;}

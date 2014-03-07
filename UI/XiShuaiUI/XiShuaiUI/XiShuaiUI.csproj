@@ -157,10 +157,11 @@
     <Content Include="js\archives.js" />
     <Content Include="js\jquery.cycle.all.min.js" />
     <Content Include="js\jquery.js" />
-    <Content Include="js\jquery_muchun.js" />
+    <Content Include="js\jquery_xishuai.js" />
     <Content Include="js\my_quicktags.js" />
     <Content Include="js\PNG.js" />
     <Content Include="search.html" />
+    <Content Include="test.html" />
     <Content Include="Web.config" />
     <Content Include="index.html" />
     <Content Include="css\style.css" />

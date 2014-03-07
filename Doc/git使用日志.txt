@@ -13,6 +13,8 @@ vs使用git：
 http://www.cnblogs.com/oec2003/archive/2012/11/13/2768860.html
 
 3，去除git版本控制：删除隐藏文件夹.git
+4，git添加空文件夹方法：
+	http://www.cnblogs.com/jinzhao/archive/2012/03/21/2410156.html
 
 
 
