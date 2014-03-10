@@ -6,8 +6,6 @@ https://code.google.com/p/msysgit/downloads/list
 2，tortoisegit 记住密码：
 http://blog.csdn.net/xiangzi1113/article/details/9213667
 
-
-
 3，去除git版本控制：删除隐藏文件夹.git
 4，git添加空文件夹方法：
 	http://www.cnblogs.com/jinzhao/archive/2012/03/21/2410156.html
