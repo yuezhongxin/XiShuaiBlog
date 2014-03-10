@@ -6,15 +6,20 @@ https://code.google.com/p/msysgit/downloads/list
 2，tortoisegit 记住密码：
 http://blog.csdn.net/xiangzi1113/article/details/9213667
 
-vs使用git：
-	1，安装msysGit
-	2，安装git for windows（http://git-scm.com/downloads）
-	3，安装Git Source Control Provider（VS插件）
-http://www.cnblogs.com/oec2003/archive/2012/11/13/2768860.html
+
 
 3，去除git版本控制：删除隐藏文件夹.git
 4，git添加空文件夹方法：
 	http://www.cnblogs.com/jinzhao/archive/2012/03/21/2410156.html
+
+5，vs使用git：
+	1，安装msysGit
+	2，安装git for windows（http://git-scm.com/downloads）
+	3，安装Git Source Control Provider（VS插件）
+http://www.cnblogs.com/oec2003/archive/2012/11/13/2768860.html
+http://www.cnblogs.com/wlzcool/p/3588750.html
+http://www.cnblogs.com/jiangfei5945/p/3429637.html
+
 
 
 
