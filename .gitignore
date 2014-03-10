@@ -1,0 +1,9 @@
+/UI/XiShuaiUI/XiShuaiUI/bin/*.dll
+/UI/XiShuaiUI/XiShuaiUI/bin/*.pdb
+/UI/XiShuaiUI/XiShuaiUI/obj/Debug/*
+/UI/XiShuaiUI/XiShuaiUI/obj/Debug/*.cache
+/UI/XiShuaiUI/XiShuaiUI/obj/Debug/*.cs
+/UI/XiShuaiUI/XiShuaiUI/obj/Debug/*.txt
+/UI/XiShuaiUI/XiShuaiUI/obj/Debug/*.dll
+/UI/XiShuaiUI/XiShuaiUI/obj/Debug/*.pdb
+/UI/XiShuaiUI/XiShuaiUI.v11.suo
