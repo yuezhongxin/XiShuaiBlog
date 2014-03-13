@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="css\ideal.css" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />
     <Content Include="images\xishuai.png" />
@@ -172,6 +173,7 @@
     <Content Include="_sider1.html" />
     <Content Include="_sider2.html" />
     <Content Include="_shangxia2.html" />
+    <Content Include="ideal.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
