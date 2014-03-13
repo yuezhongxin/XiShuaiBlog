@@ -1,11 +1,11 @@
 ﻿@charset "utf-8";
 /*
-Theme Name: Muchun
-Theme URI: www.muchun.net
+Theme Name: xishuai
+Theme URI: www.yuezhongxin.com
 Description: 主题作者 <a href="http://www.yuezhongxin.com/">蟋蟀</a>，QQ：624541997，主题更新及Bug反馈请到 <a href="http://624541997.qzone.qq.com" target="_blank">QQ空间</a>.
 Author:<a href="http://www.yuezhongxin.com/">蟋蟀</a>
 Version: V1.0
-Tags: fixed width, two columns, widgets, blue, custom-header, custom-background, Muchun, 蟋蟀
+Tags: fixed width, two columns, widgets, blue, custom-header, custom-background, xishuai, 蟋蟀
 */
 /*=== Setup ===*/
 
@@ -625,3 +625,10 @@ ol.commentlist li div.floor{float:right;color:#bbb}
 .mtitle{display:inline;padding-left:5px;height:30px;color:#333;font-weight:700;font-size:14px;line-height:30px}
 .mtitle span{float:right;}
 .b2{width:100%;border-top:2px solid #08A5E0;*margin-bottom:-20px}
+
+/*我的音乐*/
+.music-title {height: 50px; width: 100%;}
+.music-title a{margin-right: 5px; position: relative;}
+.music-title a:hover{}
+.music-title a img{float: left; height: 50px; width: 50px;}
+.music-title div{margin-top: 18px; margin-left: 60px;}
