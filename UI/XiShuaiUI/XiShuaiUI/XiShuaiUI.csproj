@@ -60,6 +60,9 @@
     <Content Include="404.html" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />
+    <Content Include="images\bg_d.png" />
+    <Content Include="images\bg_g.png" />
+    <Content Include="images\bg_line.png" />
     <Content Include="images\xishuai.png" />
     <Content Include="links.html" />
     <Content Include="list.html" />
@@ -173,6 +176,8 @@
     <Content Include="_sider2.html" />
     <Content Include="_shangxia2.html" />
     <Content Include="ideal.html" />
+    <Content Include="music.html" />
+    <Content Include="movie.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -189,7 +194,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\smilies\qq\" />
-    <Folder Include="uploads\" />
+    <Folder Include="uploads\movie\" />
+    <Folder Include="uploads\music\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
