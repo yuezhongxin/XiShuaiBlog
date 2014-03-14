@@ -736,46 +736,47 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     font-size: 14px;
 }
 
-/*电影*/
-.timenews {
+/*摄影*/
+.movie {
     border-right: 1px solid #E5E5E5;
     padding-left: 43px;
     width: 640px;
     overflow: hidden;
     background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
 }
-.timenews .gd {
+.movie .gd {
     background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
     height: 20px;
     overflow: hidden;
 }
-.timenews .Lnewstit {
+.movie .movie-title {
     margin-left: -43px;
     background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
     line-height: 32px;
     overflow: hidden;
     margin-top: 13px;
     margin-bottom: 13px;
+    height: 33px;
 }
-.timenews .Lnewstit span.time {
+.movie .movie-title span.time {
     padding: 0px 16px;
     width: 76px;
     text-align: center;
     font-size: 14px;
     color: #FFF;
 }
-.timenews .Lnewstit span {
+.movie .movie-title span {
     vertical-align: top;
     display: inline-block;
 }
-.timenews .Lnewstit span.bt {
+.movie .movie-title span.bt {
     padding: 0px 15px;
     font-family: "微软雅黑";
     font-size: 20px;
     font-weight: 700;
     width: 520px;
 }
-.timenews .Lnewstit span.bt span.type {
+.movie .movie-title span.bt span.type {
     color: #FFF;
     background: none repeat scroll 0% 0% #D9413E;
     line-height: 18px;
@@ -786,13 +787,75 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     margin-right: 5px;
     font-size: 12px;
 }
-.timenews .Lnewscon {
+.movie .movie-content {
     padding: 0px 24px 13px 80px;
     width: 536px;
     overflow: hidden;
     line-height: 28px;
 }
-.timenews .Lnewscon p {
+.movie .movie-content p {
+    line-height: 28px;
+    font-size: 14px;
+}
+
+/*摄影*/
+.photograph {
+    border-right: 1px solid #E5E5E5;
+    padding-left: 43px;
+    width: 640px;
+    overflow: hidden;
+    background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
+}
+.photograph .gd {
+    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    height: 20px;
+    overflow: hidden;
+}
+.photograph .photograph-title {
+    margin-left: -43px;
+    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    line-height: 32px;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    height: 33px;
+}
+.photograph .photograph-title span.time {
+    padding: 0px 16px;
+    width: 76px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFF;
+}
+.photograph .photograph-title span {
+    vertical-align: top;
+    display: inline-block;
+}
+.photograph .photograph-title span.bt {
+    padding: 0px 15px;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    font-weight: 700;
+    width: 520px;
+}
+.photograph .photograph-title span.bt span.type {
+    color: #FFF;
+    background: none repeat scroll 0% 0% #D9413E;
+    line-height: 18px;
+    height: 18px;
+    padding: 0px 6px;
+    border-radius: 2px;
+    margin-top: 7px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.photograph .photograph-content {
+    padding: 0px 24px 13px 80px;
+    width: 536px;
+    overflow: hidden;
+    line-height: 28px;
+}
+.photograph .photograph-content p {
     line-height: 28px;
     font-size: 14px;
 }

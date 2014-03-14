@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>摄影图片浏览 | 蟋蟀</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/slicebox_css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicebox_css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicebox_css/custom.css" />
+    <script type="text/javascript" src="js/slicebox_js/modernizr.custom.46884.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>玄武门 <span>2013-12-31</span></h1>
+        <div class="wrapper">
+            <ul id="sb-slider" class="sb-slider">
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="uploads/photograph/thumbnail/DSC_0430.jpg" alt="image1" /></a>
+                    <div class="sb-description">
+                        <h3>小星星</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="uploads/photograph/thumbnail/DSC_0774.jpg" alt="image2" /></a>
+                    <div class="sb-description">
+                        <h3>梅花</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="uploads/photograph/thumbnail/DSC_0909.jpg" alt="image1" /></a>
+                    <div class="sb-description">
+                        <h3>繁花似锦</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="uploads/photograph/thumbnail/DSC_0940.jpg" alt="image1" /></a>
+                    <div class="sb-description">
+                        <h3>时光穿梭</h3>
+                    </div>
+                </li>
+            </ul>
+
+            <div id="shadow" class="shadow"></div>
+
+            <div id="nav-arrows" class="nav-arrows">
+                <a href="#">Next</a>
+                <a href="#">Previous</a>
+            </div>
+
+        </div>
+        <!-- /wrapper -->
+    </div>
+    <script type="text/javascript" src="js/slicebox_js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slicebox_js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var Page = (function () {
+                var $navArrows = $('#nav-arrows').hide(),
+                    $shadow = $('#shadow').hide(),
+                    slicebox = $('#sb-slider').slicebox({
+                        onReady: function () {
+                            $navArrows.show();
+                            $shadow.show();
+                        },
+                        orientation: 'r',
+                        cuboidsRandom: true,
+                        disperseFactor: 30
+                    }),
+                    init = function () {
+
+                        initEvents();
+                    },
+                    initEvents = function () {
+                        // add navigation events
+                        $navArrows.children(':first').on('click', function () {
+                            slicebox.next();
+                            return false;
+                        });
+                        $navArrows.children(':last').on('click', function () {
+                            slicebox.previous();
+                            return false;
+                        });
+                    };
+                return { init: init };
+            })();
+            Page.init();
+        });
+		</script>
+</body>
+</html>

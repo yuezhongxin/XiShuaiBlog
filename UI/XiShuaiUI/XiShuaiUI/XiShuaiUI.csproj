@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="js\slicebox_js\jquery.min.js" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />
     <Content Include="images\bg_d.png" />
@@ -66,6 +67,23 @@
     <Content Include="images\xishuai.png" />
     <Content Include="links.html" />
     <Content Include="list.html" />
+    <Content Include="css\slicebox_css\custom.css" />
+    <Content Include="css\slicebox_css\demo.css" />
+    <Content Include="css\slicebox_css\slicebox.css" />
+    <Content Include="images\slicebox_images\1.jpg" />
+    <Content Include="images\slicebox_images\2.jpg" />
+    <Content Include="images\slicebox_images\3.jpg" />
+    <Content Include="images\slicebox_images\4.jpg" />
+    <Content Include="images\slicebox_images\5.jpg" />
+    <Content Include="images\slicebox_images\6.jpg" />
+    <Content Include="images\slicebox_images\7.jpg" />
+    <Content Include="images\slicebox_images\fancy_deboss.png" />
+    <Content Include="images\slicebox_images\nav.png" />
+    <Content Include="images\slicebox_images\options.png" />
+    <Content Include="images\slicebox_images\shadow.png" />
+    <Content Include="photographView.html" />
+    <Content Include="js\slicebox_js\jquery.slicebox.js" />
+    <Content Include="js\slicebox_js\modernizr.custom.46884.js" />
     <Content Include="tags.html" />
     <Content Include="images\0bg.png" />
     <Content Include="images\234543.png" />
@@ -178,6 +196,7 @@
     <Content Include="ideal.html" />
     <Content Include="music.html" />
     <Content Include="movie.html" />
+    <Content Include="photograph.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +215,7 @@
     <Folder Include="images\smilies\qq\" />
     <Folder Include="uploads\movie\" />
     <Folder Include="uploads\music\" />
+    <Folder Include="uploads\photograph\thumbnail\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
