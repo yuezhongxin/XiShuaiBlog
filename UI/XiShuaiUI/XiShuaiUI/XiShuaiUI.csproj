@@ -81,7 +81,7 @@
     <Content Include="images\slicebox_images\nav.png" />
     <Content Include="images\slicebox_images\options.png" />
     <Content Include="images\slicebox_images\shadow.png" />
-    <Content Include="photographView.html" />
+    <Content Include="photoView.html" />
     <Content Include="js\slicebox_js\jquery.slicebox.js" />
     <Content Include="js\slicebox_js\modernizr.custom.46884.js" />
     <Content Include="tags.html" />
@@ -197,6 +197,7 @@
     <Content Include="music.html" />
     <Content Include="movie.html" />
     <Content Include="photograph.html" />
+    <Content Include="bike.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\smilies\qq\" />
+    <Folder Include="uploads\bike\thumbnail\" />
     <Folder Include="uploads\movie\" />
     <Folder Include="uploads\music\" />
     <Folder Include="uploads\photograph\thumbnail\" />

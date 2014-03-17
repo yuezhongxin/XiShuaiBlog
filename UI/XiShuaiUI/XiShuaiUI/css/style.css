@@ -1,15 +1,8 @@
 ﻿@charset "utf-8";
 /*
-Theme Name: xishuai
-Theme URI: www.yuezhongxin.com
-Description: 主题作者 <a href="http://www.yuezhongxin.com/">蟋蟀</a>，QQ：624541997，主题更新及Bug反馈请到 <a href="http://624541997.qzone.qq.com" target="_blank">QQ空间</a>.
-Author:<a href="http://www.yuezhongxin.com/">蟋蟀</a>
-Version: V1.0
-Tags: fixed width, two columns, widgets, blue, custom-header, custom-background, xishuai, 蟋蟀
+Name: xishuai
+URI: www.yuezhongxin.com
 */
-/*=== Setup ===*/
-
-
 
 /*	--------------------------------------------------
 Global Reset - Resets all browser defaults to 0
@@ -856,6 +849,68 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     line-height: 28px;
 }
 .photograph .photograph-content p {
+    line-height: 28px;
+    font-size: 14px;
+}
+
+/*单车*/
+.bike {
+    border-right: 1px solid #E5E5E5;
+    padding-left: 43px;
+    width: 640px;
+    overflow: hidden;
+    background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
+}
+.bike .gd {
+    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    height: 20px;
+    overflow: hidden;
+}
+.bike .bike-title {
+    margin-left: -43px;
+    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    line-height: 32px;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    height: 33px;
+}
+.bike .bike-title span.time {
+    padding: 0px 16px;
+    width: 76px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFF;
+}
+.bike .bike-title span {
+    vertical-align: top;
+    display: inline-block;
+}
+.bike .bike-title span.bt {
+    padding: 0px 15px;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    font-weight: 700;
+    width: 520px;
+}
+.bike .bike-title span.bt span.type {
+    color: #FFF;
+    background: none repeat scroll 0% 0% #D9413E;
+    line-height: 18px;
+    height: 18px;
+    padding: 0px 6px;
+    border-radius: 2px;
+    margin-top: 7px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.bike .bike-content {
+    padding: 0px 24px 13px 80px;
+    width: 536px;
+    overflow: hidden;
+    line-height: 28px;
+}
+.bike .bike-content p {
     line-height: 28px;
     font-size: 14px;
 }
