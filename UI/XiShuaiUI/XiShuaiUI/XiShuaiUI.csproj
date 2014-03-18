@@ -209,6 +209,7 @@
     <Content Include="movie.html" />
     <Content Include="photograph.html" />
     <Content Include="bike.html" />
+    <Content Include="about.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
