@@ -628,15 +628,15 @@ ol.commentlist li div.floor{float:right;color:#bbb}
 
 
 /*动态*/
-.ideal {border-right: 1px solid #E5E5E5;padding-left: 43px;width: 640px;overflow: hidden;background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;}
+.ideal {border-right: 1px solid #E5E5E5;padding-left: 43px;width: 640px;overflow: hidden;background: url('../images/timeLine/bg_line1.png') repeat-y scroll 0px 0px transparent;}
 .ideal .gd {
-    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_g.png') repeat-x scroll 0px 0px transparent;
     height: 20px;
     overflow: hidden;
 }
 .ideal .ideal-time {
     margin-left: -43px;
-    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_d1.png') no-repeat scroll 0px 0px transparent;
     line-height: 32px;
     overflow: hidden;
     margin-top: 13px;
@@ -673,16 +673,16 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     padding-left: 43px;
     width: 640px;
     overflow: hidden;
-    background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_line2.png') repeat-y scroll 0px 0px transparent;
 }
 .music .gd {
-    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_g.png') repeat-x scroll 0px 0px transparent;
     height: 20px;
     overflow: hidden;
 }
 .music .music-title {
     margin-left: -43px;
-    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_d2.png') no-repeat scroll 0px 0px transparent;
     line-height: 32px;
     overflow: hidden;
     margin-top: 13px;
@@ -735,16 +735,16 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     padding-left: 43px;
     width: 640px;
     overflow: hidden;
-    background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_line3.png') repeat-y scroll 0px 0px transparent;
 }
 .movie .gd {
-    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_g.png') repeat-x scroll 0px 0px transparent;
     height: 20px;
     overflow: hidden;
 }
 .movie .movie-title {
     margin-left: -43px;
-    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_d3.png') no-repeat scroll 0px 0px transparent;
     line-height: 32px;
     overflow: hidden;
     margin-top: 13px;
@@ -797,16 +797,16 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     padding-left: 43px;
     width: 640px;
     overflow: hidden;
-    background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_line4.png') repeat-y scroll 0px 0px transparent;
 }
 .photograph .gd {
-    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_g.png') repeat-x scroll 0px 0px transparent;
     height: 20px;
     overflow: hidden;
 }
 .photograph .photograph-title {
     margin-left: -43px;
-    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_d4.png') no-repeat scroll 0px 0px transparent;
     line-height: 32px;
     overflow: hidden;
     margin-top: 13px;
@@ -859,16 +859,16 @@ ol.commentlist li div.floor{float:right;color:#bbb}
     padding-left: 43px;
     width: 640px;
     overflow: hidden;
-    background: url('../images/bg_line.png') repeat-y scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_line5.png') repeat-y scroll 0px 0px transparent;
 }
 .bike .gd {
-    background: url('../images/bg_g.png') repeat-x scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_g.png') repeat-x scroll 0px 0px transparent;
     height: 20px;
     overflow: hidden;
 }
 .bike .bike-title {
     margin-left: -43px;
-    background: url('../images/bg_d.png') no-repeat scroll 0px 0px transparent;
+    background: url('../images/timeLine/bg_d5.png') no-repeat scroll 0px 0px transparent;
     line-height: 32px;
     overflow: hidden;
     margin-top: 13px;

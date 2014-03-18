@@ -58,12 +58,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="images\timeLine\bg_d1.png" />
+    <Content Include="images\timeLine\bg_d3.png" />
+    <Content Include="images\timeLine\bg_d4.png" />
+    <Content Include="images\timeLine\bg_d5.png" />
+    <Content Include="images\timeLine\bg_d2.png" />
+    <Content Include="images\timeLine\bg_g.png" />
+    <Content Include="images\timeLine\bg_g2.png" />
+    <Content Include="images\timeLine\bg_line1.png" />
+    <Content Include="images\timeLine\bg_line3.png" />
+    <Content Include="images\timeLine\bg_line4.png" />
+    <Content Include="images\timeLine\bg_line5.png" />
+    <Content Include="images\timeLine\bg_line2.png" />
     <Content Include="js\slicebox_js\jquery.min.js" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />
-    <Content Include="images\bg_d.png" />
-    <Content Include="images\bg_g.png" />
-    <Content Include="images\bg_line.png" />
+    <Content Include="images\timeLine\bg_d.png" />
+    <Content Include="images\timeLine\bg_line.png" />
     <Content Include="images\xishuai.png" />
     <Content Include="links.html" />
     <Content Include="list.html" />
