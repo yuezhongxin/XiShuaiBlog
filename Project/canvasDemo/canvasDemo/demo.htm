@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="canvas_js/jquery.js"></script>
+    <script src="canvas_js/cube.js"></script>
+    <script src="canvas_js/part_1.js"></script>
+</head>
+<body>
+    <canvas style="display: block; top: 50px; left: 420px;" height="100" width="600" id="cas">抱歉，您的浏览器不支持canvas</canvas>
+    <div id="div_main">
+        <h2>测试标题（效果完成后显示）</h2>
+    </div>
+    <script>
+        var canvas = document.getElementById("cas"),
+			ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        window.RAF = (function () {
+            return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) { window.setTimeout(callback, 1000 / 60); };
+        })();
+        var time = 0, stopTotop = false;
+        var stage = {
+            init: function () {
+                time = new Date();
+                part_1.init();
+                part_2.init();
+            },
+            update: function () {
+                var nt = new Date();
+                part_1.update(nt - time);
+                time = nt;
+            },
+            loop: function () {
+                var _this = this;
+
+                // if(part_1.state==="third"){
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+                //  }else {
+                // 	ctx.fillStyle = "rgba(246,246,246,0.2)";
+                // 	    ctx.fillRect(0,0,canvas.width,canvas.height)
+                // }
+                this.update();
+                RAF(function () {
+                    _this.loop();
+                })
+            }
+        }
+        stage.init();
+        stage.loop();
+    </script>
+</body>
+</html>

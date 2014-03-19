@@ -1,5 +1,4 @@
 E:\我的文档\XiShuai\Project\gravatarDemo\gravatarDemo\bin\gravatarDemo.dll
 E:\我的文档\XiShuai\Project\gravatarDemo\gravatarDemo\bin\gravatarDemo.pdb
-E:\我的文档\XiShuai\Project\gravatarDemo\gravatarDemo\obj\Debug\gravatarDemo.csprojResolveAssemblyReference.cache
 E:\我的文档\XiShuai\Project\gravatarDemo\gravatarDemo\obj\Debug\gravatarDemo.dll
 E:\我的文档\XiShuai\Project\gravatarDemo\gravatarDemo\obj\Debug\gravatarDemo.pdb
