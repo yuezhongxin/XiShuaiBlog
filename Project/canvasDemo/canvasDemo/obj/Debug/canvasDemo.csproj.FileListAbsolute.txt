@@ -1,5 +1,0 @@
-E:\我的文档\XiShuai\Project\canvasDemo\canvasDemo\bin\canvasDemo.dll
-E:\我的文档\XiShuai\Project\canvasDemo\canvasDemo\bin\canvasDemo.pdb
-E:\我的文档\XiShuai\Project\canvasDemo\canvasDemo\obj\Debug\canvasDemo.csprojResolveAssemblyReference.cache
-E:\我的文档\XiShuai\Project\canvasDemo\canvasDemo\obj\Debug\canvasDemo.dll
-E:\我的文档\XiShuai\Project\canvasDemo\canvasDemo\obj\Debug\canvasDemo.pdb
