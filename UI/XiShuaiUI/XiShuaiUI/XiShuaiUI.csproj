@@ -70,6 +70,9 @@
     <Content Include="images\timeLine\bg_line4.png" />
     <Content Include="images\timeLine\bg_line5.png" />
     <Content Include="images\timeLine\bg_line2.png" />
+    <Content Include="js\canvas_js\cube.js" />
+    <Content Include="js\canvas_js\jquery.js" />
+    <Content Include="js\canvas_js\part_1.js" />
     <Content Include="js\slicebox_js\jquery.min.js" />
     <Content Include="css\ie6.css" />
     <Content Include="details.html" />

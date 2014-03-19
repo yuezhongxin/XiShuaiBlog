@@ -61,7 +61,7 @@
     <Content Include="Web.config" />
     <Content Include="demo.htm" />
     <Content Include="canvas_js\cube.js" />
-    <Content Include="canvas_js\part_1.js" />
+    <Content Include="canvas_js\canvasShow.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

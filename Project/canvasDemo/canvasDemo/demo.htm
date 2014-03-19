@@ -6,7 +6,7 @@
     <title></title>
     <script src="canvas_js/jquery.js"></script>
     <script src="canvas_js/cube.js"></script>
-    <script src="canvas_js/part_1.js"></script>
+    <script src="canvas_js/canvasShow.js"></script>
 </head>
 <body>
     <canvas style="display: block; top: 50px; left: 420px;" height="100" width="600" id="cas">抱歉，您的浏览器不支持canvas</canvas>
@@ -35,21 +35,23 @@
             },
             loop: function () {
                 var _this = this;
-
-                // if(part_1.state==="third"){
                 ctx.clearRect(0, 0, canvas.width, canvas.height)
-                //  }else {
-                // 	ctx.fillStyle = "rgba(246,246,246,0.2)";
-                // 	    ctx.fillRect(0,0,canvas.width,canvas.height)
-                // }
                 this.update();
                 RAF(function () {
                     _this.loop();
                 })
             }
         }
-        stage.init();
-        stage.loop();
+
+        if (getCookie('isCanvas') != "1") {
+            addCookie("isCanvas", "1", 1);
+            //控制效果开始
+            stage.init();
+            stage.loop();
+        }
+        else {
+            $("#cas").hide();
+        }
     </script>
 </body>
 </html>
