@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bpm.data>
+	<command name="add">
+		<a href="#" id="btnAdd" command="add" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'">新增</a>
+	</command>
+</bpm.data>

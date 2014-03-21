@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication", "MvcApplication\MvcApplication.csproj", "{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{8FB0A49B-76A6-4726-A957-91A405AF8240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppServices", "AppServices\AppServices.csproj", "{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppServices.Core", "AppServices.Core\AppServices.Core.csproj", "{C934404B-090E-4E58-B0FC-DBF06200FF20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}.Release|x86.ActiveCfg = Release|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}.Release|x86.ActiveCfg = Release|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C934404B-090E-4E58-B0FC-DBF06200FF20}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E} = {8FB0A49B-76A6-4726-A957-91A405AF8240}
+		{C934404B-090E-4E58-B0FC-DBF06200FF20} = {8FB0A49B-76A6-4726-A957-91A405AF8240}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

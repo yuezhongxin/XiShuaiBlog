@@ -1,0 +1,72 @@
+﻿@model CMSExpress.AppServices.Models.Permission
+@using CMSExpress.AppServices.Mvc;
+@using CMSExpress.AppServices.Mvc.Extensions;
+@using CMSExpress.AppServices.Mvc.Easyui;
+@{
+    ViewBag.Title = "编辑菜单";
+    Layout = "~/Views/Shared/_FrameFixLayout.cshtml";
+}
+@section toolbar{
+<div id="toolbar-container">
+	<div class="toolbar">
+        <div style="margin-top:5px;">
+		<a href="#" id="btnSave" command="save" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">保存</a>
+        </div>
+	</div>
+</div>
+}
+<div class="blockData">
+    <div class="blockHead">
+        <span>菜单信息</span>
+    </div>
+    <div>
+        @using (Html.BeginForm())
+        {
+    <table class="inputTable" cellspacing="0" cellpadding="2">
+        <tbody>
+            <tr>
+                <th>菜单名称</th>
+                <td>
+                    @Html.TextBoxFor(m => m.PermissionName, new { @class = "textbox isNotNull" })<span class="required">*</span>
+                </td>
+                <th>上级菜单</th>
+                <td>
+                    @Html.EasyComboxFor(m => m.ParentId, "treeJson?type=menu&excludeId=" + Request.QueryString["id"], new { panelHeight = 150, @class = "isComboxNotNull" })<span class="required">*</span>
+                </td>
+            </tr>
+            <tr>
+                <th>菜单地址</th>
+                <td colspan="3">
+                    @Html.TextBoxFor(m => m.Url, new { @class = "textbox isNotNull", style = "width:550px" })<span class="required">*</span>
+                </td>
+            </tr>
+            <tr>
+                <th>排序序号</th>
+                <td colspan="3">
+                    @Html.TextBoxFor(m => m.SortOrder, new { @class = "textbox", style = "width:70px;", maxlength = 5 })
+                </td>
+            </tr>
+            <tr>
+                <th>是否有权限控制</th>
+                <td colspan="3">
+                    @Html.CheckBoxFor(m => m.IsAuthorized, "权限控制")
+                </td>
+            </tr>
+            <tr>
+                <th>是否启用</th>
+                <td colspan="3">
+                    @Html.CheckBoxForStatus(m => m.Status, "启用菜单")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        }
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#btnSave").click(function () {
+            $("form:first").submit();
+        });
+    });
+</script>

@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AC695BD-BF54-46EB-8C2F-AE43C9E1BB83}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMSExpress.MvcApplication</RootNamespace>
+    <AssemblyName>CMSExpress.MvcApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="CMSExpress.Common, Version=1.0.4731.25735, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CMSExpress.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\packages\NPOI.1.2.5\lib\net40\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.1.2.5\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity">
+      <HintPath>..\packages\NVelocity.1.0.3\lib\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20505.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20505.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20505.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20505.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20505.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.0.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.0.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AppLocale.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppLocale.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\WebBundleConfig.cs" />
+    <Compile Include="App_Start\WebFilterConfig.cs" />
+    <Compile Include="App_Start\WebRouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Workflow\WorkflowAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PermissionController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\data.enums.xml" />
+    <Content Include="App_Data\data.toolbars.xml" />
+    <Content Include="Content\mobile\images\ajax-loader.gif" />
+    <Content Include="Content\mobile\images\icons-18-black.png" />
+    <Content Include="Content\mobile\images\icons-18-white.png" />
+    <Content Include="Content\mobile\images\icons-36-black.png" />
+    <Content Include="Content\mobile\images\icons-36-white.png" />
+    <Content Include="Content\site\images\ajax-loader.gif" />
+    <Content Include="Content\site\images\bg-footer.png" />
+    <Content Include="Content\site\images\bg-h5.gif" />
+    <Content Include="Content\site\images\bg-head-blue.gif" />
+    <Content Include="Content\site\images\bg-input-search.png" />
+    <Content Include="Content\site\images\bg-textarea.jpg" />
+    <Content Include="Content\site\images\btn-blue-search.gif" />
+    <Content Include="Content\site\images\btn-darkblue.gif" />
+    <Content Include="Content\site\images\btn-gray.gif" />
+    <Content Include="Content\site\images\btn-orange.gif" />
+    <Content Include="Content\site\images\icons-18-black.png" />
+    <Content Include="Content\site\images\icons-18-white.png" />
+    <Content Include="Content\site\images\icons-36-black.png" />
+    <Content Include="Content\site\images\icons-36-white.png" />
+    <Content Include="Content\site\login.css" />
+    <Content Include="Content\mobile\jquery.mobile-1.2.0.css" />
+    <Content Include="Content\mobile\jquery.mobile-1.2.0.min.css" />
+    <Content Include="Content\mobile\jquery.mobile.structure-1.2.0.css" />
+    <Content Include="Content\mobile\jquery.mobile.structure-1.2.0.min.css" />
+    <Content Include="Content\mobile\jquery.mobile.theme-1.2.0.css" />
+    <Content Include="Content\mobile\jquery.mobile.theme-1.2.0.min.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\bpm.grid.js" />
+    <Content Include="Scripts\bpm.core.js" />
+    <Content Include="Scripts\bpm.main.js" />
+    <Content Include="Scripts\bpm.toolbars.js" />
+    <Content Include="Scripts\bpm.validation.js" />
+    <Content Include="Scripts\easyui\changelog.txt" />
+    <Content Include="Scripts\easyui\demo\accordion.html" />
+    <Content Include="Scripts\easyui\demo\calendar.html" />
+    <Content Include="Scripts\easyui\demo\combo.html" />
+    <Content Include="Scripts\easyui\demo\combobox.html" />
+    <Content Include="Scripts\easyui\demo\combogrid.html" />
+    <Content Include="Scripts\easyui\demo\combotree.html" />
+    <Content Include="Scripts\easyui\demo\datagrid.html" />
+    <Content Include="Scripts\easyui\demo\datagrid2.html" />
+    <Content Include="Scripts\easyui\demo\datagrid3.html" />
+    <Content Include="Scripts\easyui\demo\datagrid4.html" />
+    <Content Include="Scripts\easyui\demo\datagrid5.html" />
+    <Content Include="Scripts\easyui\demo\datebox.html" />
+    <Content Include="Scripts\easyui\demo\datetimebox.html" />
+    <Content Include="Scripts\easyui\demo\demo.css" />
+    <Content Include="Scripts\easyui\demo\dialog.html" />
+    <Content Include="Scripts\easyui\demo\draggable.html" />
+    <Content Include="Scripts\easyui\demo\droppable.html" />
+    <Content Include="Scripts\easyui\demo\droppable1.html" />
+    <Content Include="Scripts\easyui\demo\droppable2.html" />
+    <Content Include="Scripts\easyui\demo\easyloader.html" />
+    <Content Include="Scripts\easyui\demo\form.html" />
+    <Content Include="Scripts\easyui\demo\layout.html" />
+    <Content Include="Scripts\easyui\demo\layout1.html" />
+    <Content Include="Scripts\easyui\demo\layout2.html" />
+    <Content Include="Scripts\easyui\demo\linkbutton.html" />
+    <Content Include="Scripts\easyui\demo\menu.html" />
+    <Content Include="Scripts\easyui\demo\menubutton.html" />
+    <Content Include="Scripts\easyui\demo\messager.html" />
+    <Content Include="Scripts\easyui\demo\numberbox.html" />
+    <Content Include="Scripts\easyui\demo\numberbox2.html" />
+    <Content Include="Scripts\easyui\demo\numberspinner.html" />
+    <Content Include="Scripts\easyui\demo\pagination.html" />
+    <Content Include="Scripts\easyui\demo\panel.html" />
+    <Content Include="Scripts\easyui\demo\panel2.html" />
+    <Content Include="Scripts\easyui\demo\progressbar.html" />
+    <Content Include="Scripts\easyui\demo\propertygrid.html" />
+    <Content Include="Scripts\easyui\demo\resizable.html" />
+    <Content Include="Scripts\easyui\demo\searchbox.html" />
+    <Content Include="Scripts\easyui\demo\slider.html" />
+    <Content Include="Scripts\easyui\demo\splitbutton.html" />
+    <Content Include="Scripts\easyui\demo\tabs.html" />
+    <Content Include="Scripts\easyui\demo\tabs_href_test.html" />
+    <Content Include="Scripts\easyui\demo\timespinner.html" />
+    <Content Include="Scripts\easyui\demo\tree.html" />
+    <Content Include="Scripts\easyui\demo\tree2.html" />
+    <Content Include="Scripts\easyui\demo\treegrid.html" />
+    <Content Include="Scripts\easyui\demo\treegrid2.html" />
+    <Content Include="Scripts\easyui\demo\treegrid3.html" />
+    <Content Include="Scripts\easyui\demo\validatebox.html" />
+    <Content Include="Scripts\easyui\demo\window.html" />
+    <Content Include="Scripts\easyui\easyloader.js" />
+    <Content Include="Scripts\easyui\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\easyui\jquery.easyui.min.js" />
+    <Content Include="Scripts\easyui\licence_gpl.txt" />
+    <Content Include="Scripts\easyui\license_commercial.txt" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-af.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-bg.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-ca.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-cs.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-cz.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-da.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-de.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-en.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-es.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-fr.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-it.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-nl.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-pt_BR.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-ru.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-tr.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Scripts\easyui\locale\easyui-lang-zh_TW.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.accordion.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.calendar.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.combo.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.combobox.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.combogrid.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.combotree.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.datagrid.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.datebox.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.datetimebox.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.dialog.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.draggable.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.droppable.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.form.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.layout.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.linkbutton.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.menu.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.menubutton.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.messager.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.numberbox.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.numberspinner.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.pagination.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.panel.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.parser.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.progressbar.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.propertygrid.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.resizable.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.searchbox.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.slider.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.spinner.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.splitbutton.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.tabs.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.timespinner.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.tree.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.treegrid.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.validatebox.js" />
+    <Content Include="Scripts\easyui\plugins\jquery.window.js" />
+    <Content Include="Scripts\easyui\readme.txt" />
+    <Content Include="Scripts\easyui\src\easyloader.js" />
+    <Content Include="Scripts\easyui\src\jquery.accordion.js" />
+    <Content Include="Scripts\easyui\src\jquery.calendar.js" />
+    <Content Include="Scripts\easyui\src\jquery.combobox.js" />
+    <Content Include="Scripts\easyui\src\jquery.datebox.js" />
+    <Content Include="Scripts\easyui\src\jquery.draggable.js" />
+    <Content Include="Scripts\easyui\src\jquery.droppable.js" />
+    <Content Include="Scripts\easyui\src\jquery.form.js" />
+    <Content Include="Scripts\easyui\src\jquery.linkbutton.js" />
+    <Content Include="Scripts\easyui\src\jquery.menu.js" />
+    <Content Include="Scripts\easyui\src\jquery.parser.js" />
+    <Content Include="Scripts\easyui\src\jquery.progressbar.js" />
+    <Content Include="Scripts\easyui\src\jquery.propertygrid.js" />
+    <Content Include="Scripts\easyui\src\jquery.resizable.js" />
+    <Content Include="Scripts\easyui\src\jquery.slider.js" />
+    <Content Include="Scripts\easyui\src\jquery.tabs.js" />
+    <Content Include="Scripts\easyui\src\jquery.window.js" />
+    <Content Include="Scripts\easyui\themes\default\accordion.css" />
+    <Content Include="Scripts\easyui\themes\default\calendar.css" />
+    <Content Include="Scripts\easyui\themes\default\combo.css" />
+    <Content Include="Scripts\easyui\themes\default\combobox.css" />
+    <Content Include="Scripts\easyui\themes\default\datagrid.css" />
+    <Content Include="Scripts\easyui\themes\default\datebox.css" />
+    <Content Include="Scripts\easyui\themes\default\dialog.css" />
+    <Content Include="Scripts\easyui\themes\default\easyui.css" />
+    <Content Include="Scripts\easyui\themes\default\images\accordion_collapse.png" />
+    <Content Include="Scripts\easyui\themes\default\images\accordion_expand.png" />
+    <Content Include="Scripts\easyui\themes\default\images\blank.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\button_a_bg.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\button_plain_hover.png" />
+    <Content Include="Scripts\easyui\themes\default\images\button_span_bg.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\combo_arrow.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_footer_bg.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="Scripts\easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="Scripts\easyui\themes\default\images\menu.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\menu_downarrow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\menu_rightarrow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\menu_sep.png" />
+    <Content Include="Scripts\easyui\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\messager_error.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\messager_info.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\messager_question.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\messager_warning.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\pagination_first.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\pagination_last.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\pagination_load.png" />
+    <Content Include="Scripts\easyui\themes\default\images\pagination_loading.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\pagination_next.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\pagination_prev.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\panel_loading.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\panel_title.png" />
+    <Content Include="Scripts\easyui\themes\default\images\panel_tools.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="Scripts\easyui\themes\default\images\slider_handle.png" />
+    <Content Include="Scripts\easyui\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tabs_active.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tabs_close.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tabs_enabled.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_arrows.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_dnd_no.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_elbow.png" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_file.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_folder.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_folder_open.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\tree_loading.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="Scripts\easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="Scripts\easyui\themes\default\layout.css" />
+    <Content Include="Scripts\easyui\themes\default\linkbutton.css" />
+    <Content Include="Scripts\easyui\themes\default\menu.css" />
+    <Content Include="Scripts\easyui\themes\default\menubutton.css" />
+    <Content Include="Scripts\easyui\themes\default\messager.css" />
+    <Content Include="Scripts\easyui\themes\default\pagination.css" />
+    <Content Include="Scripts\easyui\themes\default\panel.css" />
+    <Content Include="Scripts\easyui\themes\default\progressbar.css" />
+    <Content Include="Scripts\easyui\themes\default\propertygrid.css" />
+    <Content Include="Scripts\easyui\themes\default\searchbox.css" />
+    <Content Include="Scripts\easyui\themes\default\slider.css" />
+    <Content Include="Scripts\easyui\themes\default\spinner.css" />
+    <Content Include="Scripts\easyui\themes\default\splitbutton.css" />
+    <Content Include="Scripts\easyui\themes\default\tabs.css" />
+    <Content Include="Scripts\easyui\themes\default\tree.css" />
+    <Content Include="Scripts\easyui\themes\default\validatebox.css" />
+    <Content Include="Scripts\easyui\themes\default\window.css" />
+    <Content Include="Scripts\easyui\themes\gray\accordion.css" />
+    <Content Include="Scripts\easyui\themes\gray\calendar.css" />
+    <Content Include="Scripts\easyui\themes\gray\combo.css" />
+    <Content Include="Scripts\easyui\themes\gray\combobox.css" />
+    <Content Include="Scripts\easyui\themes\gray\datagrid.css" />
+    <Content Include="Scripts\easyui\themes\gray\datebox.css" />
+    <Content Include="Scripts\easyui\themes\gray\dialog.css" />
+    <Content Include="Scripts\easyui\themes\gray\easyui.css" />
+    <Content Include="Scripts\easyui\themes\gray\images\accordion_collapse.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\accordion_expand.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\blank.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\button_a_bg.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\button_plain_hover.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\button_span_bg.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\calendar_nextmonth.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\calendar_nextyear.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\calendar_prevmonth.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\calendar_prevyear.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\combo_arrow.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datagrid_header_bg.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datagrid_row_expand.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datagrid_title_bg.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\menu.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\menu_downarrow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\menu_rightarrow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\menu_sep.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\menu_split_downarrow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\messager_error.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\messager_info.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\messager_question.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\messager_warning.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\pagination_first.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\pagination_last.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\pagination_load.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\pagination_loading.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\pagination_next.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\pagination_prev.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\panel_loading.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\panel_title.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\panel_tools.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\spinner_arrow_down.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\spinner_arrow_up.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tabs_close.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tabs_enabled.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tabs_leftarrow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\tabs_rightarrow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_arrows.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_checkbox_0.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_checkbox_1.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_checkbox_2.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_dnd_no.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_dnd_yes.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_elbow.png" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_file.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_folder.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_folder_open.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\tree_loading.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\validatebox_pointer.gif" />
+    <Content Include="Scripts\easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Scripts\easyui\themes\gray\layout.css" />
+    <Content Include="Scripts\easyui\themes\gray\linkbutton.css" />
+    <Content Include="Scripts\easyui\themes\gray\menu.css" />
+    <Content Include="Scripts\easyui\themes\gray\menubutton.css" />
+    <Content Include="Scripts\easyui\themes\gray\messager.css" />
+    <Content Include="Scripts\easyui\themes\gray\pagination.css" />
+    <Content Include="Scripts\easyui\themes\gray\panel.css" />
+    <Content Include="Scripts\easyui\themes\gray\progressbar.css" />
+    <Content Include="Scripts\easyui\themes\gray\propertygrid.css" />
+    <Content Include="Scripts\easyui\themes\gray\searchbox.css" />
+    <Content Include="Scripts\easyui\themes\gray\slider.css" />
+    <Content Include="Scripts\easyui\themes\gray\spinner.css" />
+    <Content Include="Scripts\easyui\themes\gray\splitbutton.css" />
+    <Content Include="Scripts\easyui\themes\gray\tabs.css" />
+    <Content Include="Scripts\easyui\themes\gray\tree.css" />
+    <Content Include="Scripts\easyui\themes\gray\validatebox.css" />
+    <Content Include="Scripts\easyui\themes\gray\window.css" />
+    <Content Include="Scripts\easyui\themes\icon.css" />
+    <Content Include="Scripts\easyui\themes\icons\back.png" />
+    <Content Include="Scripts\easyui\themes\icons\blank.gif" />
+    <Content Include="Scripts\easyui\themes\icons\cancel.png" />
+    <Content Include="Scripts\easyui\themes\icons\cut.png" />
+    <Content Include="Scripts\easyui\themes\icons\edit_add.png" />
+    <Content Include="Scripts\easyui\themes\icons\edit_remove.png" />
+    <Content Include="Scripts\easyui\themes\icons\filesave.png" />
+    <Content Include="Scripts\easyui\themes\icons\help.png" />
+    <Content Include="Scripts\easyui\themes\icons\mini_add.png" />
+    <Content Include="Scripts\easyui\themes\icons\mini_edit.png" />
+    <Content Include="Scripts\easyui\themes\icons\mini_refresh.png" />
+    <Content Include="Scripts\easyui\themes\icons\no.png" />
+    <Content Include="Scripts\easyui\themes\icons\ok.png" />
+    <Content Include="Scripts\easyui\themes\icons\pencil.png" />
+    <Content Include="Scripts\easyui\themes\icons\print.png" />
+    <Content Include="Scripts\easyui\themes\icons\redo.png" />
+    <Content Include="Scripts\easyui\themes\icons\reload.png" />
+    <Content Include="Scripts\easyui\themes\icons\search.png" />
+    <Content Include="Scripts\easyui\themes\icons\sum.png" />
+    <Content Include="Scripts\easyui\themes\icons\tip.png" />
+    <Content Include="Scripts\easyui\themes\icons\undo.png" />
+    <Content Include="Scripts\easyui\themes\metro\accordion.css" />
+    <Content Include="Scripts\easyui\themes\metro\calendar.css" />
+    <Content Include="Scripts\easyui\themes\metro\combo.css" />
+    <Content Include="Scripts\easyui\themes\metro\combobox.css" />
+    <Content Include="Scripts\easyui\themes\metro\datagrid.css" />
+    <Content Include="Scripts\easyui\themes\metro\datebox.css" />
+    <Content Include="Scripts\easyui\themes\metro\dialog.css" />
+    <Content Include="Scripts\easyui\themes\metro\easyui.css" />
+    <Content Include="Scripts\easyui\themes\metro\images\accordion_collapse.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\accordion_expand.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\blank.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\calendar_nextmonth.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\calendar_nextyear.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\calendar_prevmonth.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\calendar_prevyear.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\combo_arrow.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\datagrid_row_collapse.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\datagrid_row_expand.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\datagrid_sort_asc.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\datagrid_sort_desc.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\menu_downarrow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\menu_rightarrow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\menu_sep.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\menu_split_downarrow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\messager_error.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\messager_info.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\messager_question.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\messager_warning.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\pagination_first.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\pagination_last.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\pagination_load.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\pagination_loading.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\pagination_next.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\pagination_prev.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\panel_loading.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\panel_tools.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\slider_handle.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\tabs_close.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tabs_leftarrow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\tabs_rightarrow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_arrows.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_checkbox_0.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_checkbox_1.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_checkbox_2.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_dnd_no.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_dnd_yes.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_elbow.png" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_file.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_folder.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_folder_open.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\tree_loading.gif" />
+    <Content Include="Scripts\easyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="Scripts\easyui\themes\metro\layout.css" />
+    <Content Include="Scripts\easyui\themes\metro\linkbutton.css" />
+    <Content Include="Scripts\easyui\themes\metro\menu.css" />
+    <Content Include="Scripts\easyui\themes\metro\menubutton.css" />
+    <Content Include="Scripts\easyui\themes\metro\messager.css" />
+    <Content Include="Scripts\easyui\themes\metro\pagination.css" />
+    <Content Include="Scripts\easyui\themes\metro\panel.css" />
+    <Content Include="Scripts\easyui\themes\metro\progressbar.css" />
+    <Content Include="Scripts\easyui\themes\metro\propertygrid.css" />
+    <Content Include="Scripts\easyui\themes\metro\searchbox.css" />
+    <Content Include="Scripts\easyui\themes\metro\slider.css" />
+    <Content Include="Scripts\easyui\themes\metro\splitbutton.css" />
+    <Content Include="Scripts\easyui\themes\metro\tabs.css" />
+    <Content Include="Scripts\easyui\themes\metro\tree.css" />
+    <Content Include="Scripts\easyui\themes\metro\validatebox.css" />
+    <Content Include="Scripts\easyui\themes\metro\window.css" />
+    <Content Include="Scripts\jbox\i18n\jquery.jBox-zh-CN.js" />
+    <Content Include="Scripts\jbox\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jbox\jquery.jBox-2.3.min.js" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins2\Blue\jbox.css" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins2\Gray\jbox.css" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins2\Green\jbox.css" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins2\Pink\jbox.css" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins2\Purple\jbox.css" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins2\Yellow\jbox.css" />
+    <Content Include="Scripts\jbox\Skins2\样式说明%28以Green皮肤为例%29.css" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Blue\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Brown\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Default\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\GrayCool\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Gray\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Green\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\GreyBlue\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Purple\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\Red\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBlue\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareBrown\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareGreen\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\SharePurple\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-button1.png" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-button2.png" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-close1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-close2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-content-loading.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-icons-ie6.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-icons.png" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-loading1.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-loading2.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-loading3.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\images\jbox-title-icon.gif" />
+    <Content Include="Scripts\jbox\Skins\ShareRed\jbox.css" />
+    <Content Include="Scripts\jbox\Skins\样式说明%28以Default皮肤为例%29.css" />
+    <Content Include="Scripts\jbox\update.txt" />
+    <Content Include="Areas\Workflow\Views\Web.config" />
+    <Content Include="autofac.config" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.9.0.js" />
+    <Content Include="Scripts\jquery-ui-1.9.0.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\bpm.page.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\site\global.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Test.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Customer\" />
+    <Folder Include="Areas\Admin\Views\Department\" />
+    <Folder Include="Areas\Admin\Views\Management\" />
+    <Folder Include="Areas\Admin\Views\Role\" />
+    <Folder Include="Areas\Admin\Views\User\" />
+    <Folder Include="Areas\Workflow\Controllers\" />
+    <Folder Include="Areas\Workflow\Models\" />
+    <Folder Include="Areas\Workflow\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appLicense.lic" />
+    <Content Include="log4net.config" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Permission\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Permission\Index.cshtml" />
+    <None Include="Scripts\easyui\demo\combobox_data.json" />
+    <None Include="Scripts\easyui\demo\datagrid_data.json" />
+    <None Include="Scripts\easyui\demo\datagrid_data2.json" />
+    <None Include="Scripts\easyui\demo\datagrid_data3.json" />
+    <None Include="Scripts\easyui\demo\form_data.json" />
+    <None Include="Scripts\easyui\demo\propertygrid_data.json" />
+    <None Include="Scripts\easyui\demo\treegrid_data.json" />
+    <None Include="Scripts\easyui\demo\treegrid_data2.json" />
+    <None Include="Scripts\easyui\demo\treegrid_data3.json" />
+    <None Include="Scripts\easyui\demo\treegrid_subdata.json" />
+    <None Include="Scripts\easyui\demo\tree_data.json" />
+    <None Include="Scripts\easyui\themes\default\images\Thumbs.db" />
+    <None Include="Scripts\easyui\themes\gray\images\Thumbs.db" />
+    <Content Include="Views\Home\Centre.cshtml" />
+    <None Include="Scripts\jbox\LGPL-LICENSE" />
+    <None Include="Scripts\jbox\MIT-LICENSE" />
+    <None Include="Scripts\jbox\Skins\Blue\images\OneNote 目录.onetoc2" />
+    <None Include="Scripts\jbox\Skins\Blue\OneNote 目录.onetoc2" />
+    <Content Include="Views\Shared\_FrameGridLayout.cshtml" />
+    <Content Include="Views\Shared\_FrameFixLayout.cshtml" />
+    <Content Include="Views\Shared\_WapLayout.cshtml" />
+    <Content Include="Views\Shared\_HeaderPartial.cshtml" />
+    <Content Include="WS\DynamicFormHandler.ashx" />
+    <Content Include="WS\DynamicScriptHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppServices.Core\AppServices.Core.csproj">
+      <Project>{c934404b-090e-4e58-b0fc-dbf06200ff20}</Project>
+      <Name>AppServices.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppServices\AppServices.csproj">
+      <Project>{F83A30F6-C212-489E-B0A7-ADEB2CD36C4E}</Project>
+      <Name>AppServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Start\AppLocale.en-us.resx" />
+    <EmbeddedResource Include="App_Start\AppLocale.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppLocale.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4292</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

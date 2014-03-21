@@ -1,0 +1,25 @@
+﻿@using CMSExpress.AppServices.Mvc.Extensions;
+@using CMSExpress.AppServices.Mvc.Easyui;
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title - @Html.ApplicationName()</title>
+    @Html.Partial("_HeaderPartial")
+    <script src="@Url.Content("~/scripts/bpm.core.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/scripts/bpm.validation.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/scripts/bpm.page.js")" type="text/javascript"></script>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north',border:false" style="overflow:visible;">
+        @Html.EasyShowMessage()
+        @RenderSection("toolbar", false)
+        <div style="padding:5px">
+            @RenderBody()
+        </div>
+	</div>
+	<div data-options="region:'center',border:false" style="padding:0 5px;">
+        @RenderSection("datagrid", false)
+	</div>
+    @RenderSection("scripts", false)
+</body>
+</html>
