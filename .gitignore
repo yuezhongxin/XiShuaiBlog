@@ -15,4 +15,7 @@
 /Project/gravatarDemo/gravatarDemo/*
 /UI/XiShuaiUI/XiShuaiUI/bin
 obj
+bin
+*.suo
 /Project/Demo/cmsExpress/packages
+/Project/Demo/cmsExpress/MvcApplication/bin
