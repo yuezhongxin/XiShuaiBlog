@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95B24B3A-A210-4800-9011-836A29DDB69E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XQH.EasyUi.Web</RootNamespace>
+    <AssemblyName>XQH.EasyUi.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\head.jpg" />
+    <Content Include="Image\loader.gif" />
+    <Content Include="Image\旗鱼.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="JQueryEasyUi\default\accordion.css" />
+    <Content Include="JQueryEasyUi\default\calendar.css" />
+    <Content Include="JQueryEasyUi\default\combo.css" />
+    <Content Include="JQueryEasyUi\default\combobox.css" />
+    <Content Include="JQueryEasyUi\default\datagrid.css" />
+    <Content Include="JQueryEasyUi\default\datebox.css" />
+    <Content Include="JQueryEasyUi\default\dialog.css" />
+    <Content Include="JQueryEasyUi\default\easyui.css" />
+    <Content Include="JQueryEasyUi\default\images\accordion_collapse.png" />
+    <Content Include="JQueryEasyUi\default\images\accordion_expand.png" />
+    <Content Include="JQueryEasyUi\default\images\button_a_bg.gif" />
+    <Content Include="JQueryEasyUi\default\images\button_plain_hover.png" />
+    <Content Include="JQueryEasyUi\default\images\button_span_bg.gif" />
+    <Content Include="JQueryEasyUi\default\images\calendar_nextmonth.gif" />
+    <Content Include="JQueryEasyUi\default\images\calendar_nextyear.gif" />
+    <Content Include="JQueryEasyUi\default\images\calendar_prevmonth.gif" />
+    <Content Include="JQueryEasyUi\default\images\calendar_prevyear.gif" />
+    <Content Include="JQueryEasyUi\default\images\combo_arrow.gif" />
+    <Content Include="JQueryEasyUi\default\images\datagrid_header_bg.gif" />
+    <Content Include="JQueryEasyUi\default\images\datagrid_row_collapse.gif" />
+    <Content Include="JQueryEasyUi\default\images\datagrid_row_expand.gif" />
+    <Content Include="JQueryEasyUi\default\images\datagrid_sort_asc.gif" />
+    <Content Include="JQueryEasyUi\default\images\datagrid_sort_desc.gif" />
+    <Content Include="JQueryEasyUi\default\images\datagrid_title_bg.png" />
+    <Content Include="JQueryEasyUi\default\images\layout_button_down.gif" />
+    <Content Include="JQueryEasyUi\default\images\layout_button_left.gif" />
+    <Content Include="JQueryEasyUi\default\images\layout_button_right.gif" />
+    <Content Include="JQueryEasyUi\default\images\layout_button_up.gif" />
+    <Content Include="JQueryEasyUi\default\images\menu.gif" />
+    <Content Include="JQueryEasyUi\default\images\menu_downarrow.png" />
+    <Content Include="JQueryEasyUi\default\images\menu_rightarrow.png" />
+    <Content Include="JQueryEasyUi\default\images\menu_sep.png" />
+    <Content Include="JQueryEasyUi\default\images\menu_split_downarrow.png" />
+    <Content Include="JQueryEasyUi\default\images\messager_error.gif" />
+    <Content Include="JQueryEasyUi\default\images\messager_info.gif" />
+    <Content Include="JQueryEasyUi\default\images\messager_question.gif" />
+    <Content Include="JQueryEasyUi\default\images\messager_warning.gif" />
+    <Content Include="JQueryEasyUi\default\images\pagination_first.gif" />
+    <Content Include="JQueryEasyUi\default\images\pagination_last.gif" />
+    <Content Include="JQueryEasyUi\default\images\pagination_load.png" />
+    <Content Include="JQueryEasyUi\default\images\pagination_loading.gif" />
+    <Content Include="JQueryEasyUi\default\images\pagination_next.gif" />
+    <Content Include="JQueryEasyUi\default\images\pagination_prev.gif" />
+    <Content Include="JQueryEasyUi\default\images\panel_loading.gif" />
+    <Content Include="JQueryEasyUi\default\images\panel_title.png" />
+    <Content Include="JQueryEasyUi\default\images\panel_tools.gif" />
+    <Content Include="JQueryEasyUi\default\images\panel_tool_collapse.gif" />
+    <Content Include="JQueryEasyUi\default\images\panel_tool_expand.gif" />
+    <Content Include="JQueryEasyUi\default\images\spinner_arrow_down.gif" />
+    <Content Include="JQueryEasyUi\default\images\spinner_arrow_up.gif" />
+    <Content Include="JQueryEasyUi\default\images\tabs_active.png" />
+    <Content Include="JQueryEasyUi\default\images\tabs_close.gif" />
+    <Content Include="JQueryEasyUi\default\images\tabs_enabled.png" />
+    <Content Include="JQueryEasyUi\default\images\tabs_leftarrow.png" />
+    <Content Include="JQueryEasyUi\default\images\tabs_rightarrow.png" />
+    <Content Include="JQueryEasyUi\default\images\tree_arrows.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_checkbox_0.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_checkbox_1.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_checkbox_2.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_dnd_no.png" />
+    <Content Include="JQueryEasyUi\default\images\tree_dnd_yes.png" />
+    <Content Include="JQueryEasyUi\default\images\tree_file.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_folder.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_folder_open.gif" />
+    <Content Include="JQueryEasyUi\default\images\tree_loading.gif" />
+    <Content Include="JQueryEasyUi\default\images\validatebox_pointer.gif" />
+    <Content Include="JQueryEasyUi\default\images\validatebox_warning.png" />
+    <Content Include="JQueryEasyUi\default\layout.css" />
+    <Content Include="JQueryEasyUi\default\linkbutton.css" />
+    <Content Include="JQueryEasyUi\default\menu.css" />
+    <Content Include="JQueryEasyUi\default\menubutton.css" />
+    <Content Include="JQueryEasyUi\default\messager.css" />
+    <Content Include="JQueryEasyUi\default\pagination.css" />
+    <Content Include="JQueryEasyUi\default\panel.css" />
+    <Content Include="JQueryEasyUi\default\spinner.css" />
+    <Content Include="JQueryEasyUi\default\splitbutton.css" />
+    <Content Include="JQueryEasyUi\default\tabs.css" />
+    <Content Include="JQueryEasyUi\default\tree.css" />
+    <Content Include="JQueryEasyUi\default\validatebox.css" />
+    <Content Include="JQueryEasyUi\default\window.css" />
+    <Content Include="JQueryEasyUi\icon.css" />
+    <Content Include="JQueryEasyUi\icons\back.png" />
+    <Content Include="JQueryEasyUi\icons\cancel.png" />
+    <Content Include="JQueryEasyUi\icons\cut.png" />
+    <Content Include="JQueryEasyUi\icons\edit_add.png" />
+    <Content Include="JQueryEasyUi\icons\edit_remove.png" />
+    <Content Include="JQueryEasyUi\icons\filesave.png" />
+    <Content Include="JQueryEasyUi\icons\help.png" />
+    <Content Include="JQueryEasyUi\icons\no.png" />
+    <Content Include="JQueryEasyUi\icons\ok.png" />
+    <Content Include="JQueryEasyUi\icons\pencil.png" />
+    <Content Include="JQueryEasyUi\icons\print.png" />
+    <Content Include="JQueryEasyUi\icons\redo.png" />
+    <Content Include="JQueryEasyUi\icons\reload.png" />
+    <Content Include="JQueryEasyUi\icons\search.png" />
+    <Content Include="JQueryEasyUi\icons\undo.png" />
+    <Content Include="JQueryEasyUi\icons\index.ico" />
+    <Content Include="JQueryEasyUi\jquery-1.4.2.min.js" />
+    <Content Include="JQueryEasyUi\jquery.easyui.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\JsonConvert.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\EasyUiService.ashx.cs">
+      <DependentUpon>EasyUiService.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ModuleManage.aspx.cs">
+      <DependentUpon>ModuleManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\ModuleManage.aspx.designer.cs">
+      <DependentUpon>ModuleManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\PurviewManage.aspx.cs">
+      <DependentUpon>PurviewManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\PurviewManage.aspx.designer.cs">
+      <DependentUpon>PurviewManage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JQueryEasyUi\default\images\Thumbs.db" />
+    <None Include="JQueryEasyUi\icons\Thumbs.db" />
+    <Content Include="JQueryEasyUi\Cookie.js" />
+    <Content Include="JQueryEasyUi\icons\Users.ico" />
+    <Content Include="JQueryEasyUi\icons\帮助.ico" />
+    <Content Include="Login.aspx" />
+    <Content Include="Service\EasyUiService.ashx" />
+    <Content Include="Web\ModuleManage.aspx" />
+    <Content Include="Web\PurviewManage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{A9AE40FF-1A21-414A-9FE7-3BE13644CC6D}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XQH.EasyUi.Access\XQH.EasyUi.Access.csproj">
+      <Project>{FDC0F623-5A12-4CBE-A96E-389605B08B1C}</Project>
+      <Name>XQH.EasyUi.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XQH.EasyUi.Entity\XQH.EasyUi.Entity.csproj">
+      <Project>{0588EAA8-1BEE-4F6D-A172-DD034783D0AC}</Project>
+      <Name>XQH.EasyUi.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>39859</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
