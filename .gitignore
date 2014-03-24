@@ -15,5 +15,11 @@
 /Project/gravatarDemo/gravatarDemo/*
 /UI/XiShuaiUI/XiShuaiUI/bin
 obj
+bin
+*.suo
 /Project/Demo/cmsExpress/packages
+<<<<<<< HEAD
 /Project/Demo/cmsExpress/cmsExpress.v11.suo
+=======
+/Project/Demo/cmsExpress/MvcApplication/bin
+>>>>>>> 850cb57151c09b3216104ff6eecddc4e7880e3e0
