@@ -1826,10 +1826,6 @@
     <Content Include="js\common.js" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="截图\QQ截图20140324193426.png" />
-    <Content Include="截图\QQ截图20140324200836.png" />
-    <Content Include="截图\QQ截图20140324202948.png" />
-    <Content Include="截图\QQ截图20140324222415.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
