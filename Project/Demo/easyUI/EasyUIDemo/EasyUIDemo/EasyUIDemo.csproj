@@ -53,6 +53,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="form.html" />
     <Content Include="css\admin.css" />
     <Content Include="Default.aspx" />
     <Content Include="EasyUI\demo\accordion\actions.html" />

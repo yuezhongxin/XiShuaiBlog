@@ -60,7 +60,9 @@
     </div>
     <div data-options="region:'center'">
         <div id="tabs" class="easyui-tabs" data-options="tools:'#tab-tools',fit:true,border:false" >
-            <div title="主页" data-options="iconCls:'icon-house'" style="padding: 10px;">主页</div>
+            <div title="主页" data-options="iconCls:'icon-house'" style="padding: 10px;">
+                <iframe scrolling="auto" frameborder="0"  src="form.html" style="width:100%;height:100%;"></iframe>
+            </div>
         </div>
         <div id="tab-tools">
             <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="addTab()"></a>
