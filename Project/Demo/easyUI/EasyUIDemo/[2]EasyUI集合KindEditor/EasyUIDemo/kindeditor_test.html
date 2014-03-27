@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="editor/themes/default/default.css" rel="stylesheet" />
+    <script src="EasyUI/jquery.min.js"></script>
+    <script src="editor/kindeditor-min.js"></script>
+    <script src="editor/lang/zh_CN.js"></script>
+</head>
+<body>
+    <div>
+        <textarea id="txtContent" name="txtContent" cols="100" rows="8" class="txtContent"
+            style="width: 70%; height: 300px; visibility: hidden;"></textarea>
+        <input type="button" name="btn1" value="获取" onclick="alert(editor.html())" />
+    </div>
+    <script type="text/javascript">
+        //编辑器
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="txtContent"]', {
+                allowFileManager: true,
+                resizeType: 1,
+                allowPreviewEmoticons: false,
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+                afterChange: function () {
+                    this.sync();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EasyUI from</title>
+    <link href="EasyUI/themes/default/easyui.css" rel="stylesheet" />
+    <link href="EasyUI/themes/icon.css" rel="stylesheet" />
+    <link href="css/admin.css" rel="stylesheet" />
+    <link href="editor/themes/default/default.css" rel="stylesheet" />
+    <script src="EasyUI/jquery.min.js"></script>
+    <script src="EasyUI/jquery.easyui.min.js"></script>
+    <script src="EasyUI/locale/easyui-lang-zh_CN.js"></script>
+    <script src="editor/kindeditor-min.js"></script>
+    <script src="editor/lang/zh_CN.js"></script>
+    <script src="js/easyui_kindeditor.js"></script>
+</head>
+<body>
+    <div style="margin: 10px 0;"></div>
+    <div style="padding: 10px 0 10px 60px">
+        <form id="ff" method="post">
+            <table>
+                <tr>
+                    <td>名称:</td>
+                    <td>
+                        <input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>邮箱:</td>
+                    <td>
+                        <input class="easyui-validatebox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+                </tr>
+                <tr>
+                    <td>标题:</td>
+                    <td>
+                        <input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>内容:</td>
+                    <td>
+                        <textarea name="message" style="height: 60px;"></textarea></td>
+                </tr>
+                <tr>
+                    <td>easyui-kindeditor编辑器:</td>
+                    <td>
+                        <textarea name="easyui_ditor" id="easyui_ditor" class="easyui-kindeditor" style="width: 100%; height: 200px; visibility: hidden;">EasyUI集合KindEditor</textarea>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="">设置</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert(KindEditor.html())">获取</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>kindeditor编辑器:</td>
+                    <td>
+                        <textarea name="txtContent" id="txtContent" style="width: 100%; height: 200px; visibility: hidden;">KindEditor</textarea>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="editor.html('我在设置KindEditor内容');">设置</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert(editor.html())">获取</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>语言:</td>
+                    <td>
+                        <select class="easyui-combobox" name="language">
+                            <option value="ar">Arabic</option>
+                            <option value="bg">Bulgarian</option>
+                            <option value="ca">Catalan</option>
+                            <option value="zh-cht">Chinese Traditional</option>
+                            <option value="cs">Czech</option>
+                            <option value="da">Danish</option>
+                            <option value="nl">Dutch</option>
+                            <option value="en" selected="selected">English</option>
+                            <option value="et">Estonian</option>
+                            <option value="fi">Finnish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="el">Greek</option>
+                            <option value="ht">Haitian Creole</option>
+                            <option value="he">Hebrew</option>
+                            <option value="hi">Hindi</option>
+                            <option value="mww">Hmong Daw</option>
+                            <option value="hu">Hungarian</option>
+                            <option value="id">Indonesian</option>
+                            <option value="it">Italian</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="lv">Latvian</option>
+                            <option value="lt">Lithuanian</option>
+                            <option value="no">Norwegian</option>
+                            <option value="fa">Persian</option>
+                            <option value="pl">Polish</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="ro">Romanian</option>
+                            <option value="ru">Russian</option>
+                            <option value="sk">Slovak</option>
+                            <option value="sl">Slovenian</option>
+                            <option value="es">Spanish</option>
+                            <option value="sv">Swedish</option>
+                            <option value="th">Thai</option>
+                            <option value="tr">Turkish</option>
+                            <option value="uk">Ukrainian</option>
+                            <option value="vi">Vietnamese</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div style="padding: 5px; margin-left: 100px;">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清除</a>
+    </div>
+    <div id="dlg" class="easyui-dialog" title="dialog" style="width: 250px; height: 120px; padding: 10px"
+        data-options="
+				iconCls: 'icon-save',
+				buttons: [{
+					text:'Ok',
+					iconCls:'icon-ok',
+					handler:function(){
+						alert('ok');
+					}
+				},{
+					text:'Cancel',
+					handler:function(){
+						alert('cancel');;
+					}
+				}]
+			">
+        确认提交吗？
+    </div>
+    <script>
+        //编辑器
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="txtContent"]', {
+                allowFileManager: true,
+                resizeType: 1,
+                allowPreviewEmoticons: false,
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+            });
+        });
+        $(function () {
+            $('#dlg').dialog('close')
+        })
+        function submitForm() {
+            $('#dlg').dialog('open')
+            //$('#ff').form('submit');
+        }
+        function clearForm() {
+            $('#ff').form('clear');
+        }
+    </script>
+</body>
+</html>
