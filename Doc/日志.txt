@@ -1,0 +1,8 @@
+http://rdiframework.s20.csome.cn
+
+code first学习：
+	1，牛叉教程：http://msdn.microsoft.com/zh-cn/data/jj193542.aspx
+	2，当代码优先（Code First）不是先写代码：http://blog.bossma.cn/csharp/when-is-code-first-not-code-first/
+	3，vs2012 安装EntityFramework
+		如果创建项目是framework4.0以下版本，会安装出现错误
+	4，code first配置连接字符串：http://msdn.microsoft.com/zh-cn/data/jj556606.aspx
