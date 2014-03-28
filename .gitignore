@@ -16,6 +16,7 @@
 /UI/XiShuaiUI/XiShuaiUI/bin
 obj
 bin
+packages
 *.suo
 /Project/Demo/cmsExpress/packages
 <<<<<<< HEAD
