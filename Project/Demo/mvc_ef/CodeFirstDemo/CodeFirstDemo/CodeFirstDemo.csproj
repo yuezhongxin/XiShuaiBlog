@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42297F06-EE4B-4726-B1DD-F60406C5E1BE}</ProjectGuid>
+    <ProjectGuid>{1C81FB00-7FC8-4773-9D28-1AE02946CFB6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeFirstNewDatabaseSample</RootNamespace>
-    <AssemblyName>CodeFirstNewDatabaseSample</AssemblyName>
+    <RootNamespace>CodeFirstDemo</RootNamespace>
+    <AssemblyName>CodeFirstDemo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,25 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201403281423111_InitialCreate.cs" />
-    <Compile Include="Migrations\201403281423111_InitialCreate.Designer.cs">
-      <DependentUpon>201403281423111_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201403290849529_InitialCreate.cs" />
+    <Compile Include="Migrations\201403290849529_InitialCreate.Designer.cs">
+      <DependentUpon>201403290849529_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201403281431342_AddUrl.cs" />
-    <Compile Include="Migrations\201403281431342_AddUrl.Designer.cs">
-      <DependentUpon>201403281431342_AddUrl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201403281436282_AddUser.cs" />
-    <Compile Include="Migrations\201403281436282_AddUser.Designer.cs">
-      <DependentUpon>201403281436282_AddUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201403281441376_ChangeDisplayName.cs" />
-    <Compile Include="Migrations\201403281441376_ChangeDisplayName.Designer.cs">
-      <DependentUpon>201403281441376_ChangeDisplayName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201403281503591_AddDepartmentNames.cs" />
-    <Compile Include="Migrations\201403281503591_AddDepartmentNames.Designer.cs">
-      <DependentUpon>201403281503591_AddDepartmentNames.cs</DependentUpon>
+    <Compile Include="Migrations\201403290930423_Update-NewType-Name.cs" />
+    <Compile Include="Migrations\201403290930423_Update-NewType-Name.Designer.cs">
+      <DependentUpon>201403290930423_Update-NewType-Name.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -77,20 +65,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201403281423111_InitialCreate.resx">
-      <DependentUpon>201403281423111_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201403290849529_InitialCreate.resx">
+      <DependentUpon>201403290849529_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201403281431342_AddUrl.resx">
-      <DependentUpon>201403281431342_AddUrl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201403281436282_AddUser.resx">
-      <DependentUpon>201403281436282_AddUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201403281441376_ChangeDisplayName.resx">
-      <DependentUpon>201403281441376_ChangeDisplayName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201403281503591_AddDepartmentNames.resx">
-      <DependentUpon>201403281503591_AddDepartmentNames.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201403290930423_Update-NewType-Name.resx">
+      <DependentUpon>201403290930423_Update-NewType-Name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

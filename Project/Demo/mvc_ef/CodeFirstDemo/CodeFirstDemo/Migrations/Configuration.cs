@@ -1,19 +1,19 @@
-namespace CodeFirstNewDatabaseSample.Migrations
+namespace CodeFirstDemo.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirstNewDatabaseSample.BloggingContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirstDemo.NewContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CodeFirstNewDatabaseSample.BloggingContext";
+            ContextKey = "CodeFirstDemo.NewContext";
         }
 
-        protected override void Seed(CodeFirstNewDatabaseSample.BloggingContext context)
+        protected override void Seed(CodeFirstDemo.NewContext context)
         {
             //  This method will be called after migrating to the latest version.
 
