@@ -1,0 +1,98 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+    <link href="../../Content/EasyUI/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../../Content/EasyUI/themes/icon.css" rel="stylesheet" />
+    <link href="../../Content/admin.css" rel="stylesheet" />
+    <script src="../../Content/EasyUI/jquery.min.js"></script>
+    <script src="../../Content/EasyUI/jquery.easyui.min.js"></script>
+    <script src="../../Content/EasyUI/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+        //异步实现用户的登录
+        function LoginUserInfo() {
+            //验证用户必须输入必填项
+            var validate = $("#ff").form("validate");
+            if (validate == false) {
+                return false;
+            }
+            //ajax提交
+            //$.ajax({
+            //    url: "Login/CheckUserLogin",
+            //    type: "POST",
+            //    dataType: "json",
+            //    data: { "Name": $("#UserName").val(), "Password": $("#Password").val() },
+            //    contentType: "application/json",
+            //    success: function (data) {
+            //        if (data.result == "success") {
+            //            window.location.href = "/Home/Index";
+            //        }
+            //        else {
+            //            alert(data.content);
+            //            window.location.href = "/Login/Login/";
+            //        }
+            //    },
+            //    error: function (xhr, error, ex) {
+            //        alert("出现错误，请稍后再试，带来不便，敬请谅解");
+            //        window.location.href = "/Login/Login/";
+            //    }
+            //});
+
+            //ajax提交
+            $.ajax({
+                url: "Login/CheckUserLogin",
+                type: "GET",
+                //dataType: "json",
+                data: { "Name": $("#UserName").val(), "Password": $("#Password").val() },
+                //contentType: "application/json",
+                success: function (data) {
+                    if (data == "success") {
+                        window.location.href = "/Home/Index";
+                    }
+                    else {
+                        alert(data);
+                        window.location.href = "/Login/Login/";
+                    }
+                },
+                error: function (xhr, error, ex) {
+                    alert(ex);
+                    //alert("出现错误，请稍后再试，带来不便，敬请谅解");
+                    //window.location.href = "/Login/Login/";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="AddUserDialog" class="easyui-dialog" style="width: 300px; height: 150px; padding: 10px 20px"
+        modal="true" closable="false" title="用户登录" buttons="#dlg-buttons" align="center">
+        <form id="ff">
+            <table id="tblAdd">
+                <tr>
+                    <td>
+                        <label for="UserName">用户名：</label></td>
+                    <td>
+                        <input class="easyui-validatebox" type="text" id="UserName" name="UserName" value="@ViewBag.UserName" data-options="required:true,validType:'length[1,32]'" /></td>
+                    <td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Password">密  码：</label></td>
+                    <td>
+                        <input class="easyui-validatebox" type="text" id="Password" name="Password" data-options="required:true,validType:'length[1,32]'" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 10px">
+                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnLogin" iconcls="icon-ok" onclick="LoginUserInfo()">确定</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

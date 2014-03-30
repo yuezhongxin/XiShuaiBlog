@@ -1,0 +1,20 @@
+﻿body{font-size:12px; font-family:Verdana,宋体,Tahoma;padding:0px; margin:0px;}
+ul{margin:0px;padding:0px;}li{    list-style-type:none;}
+a{ color:Black; text-decoration:none;}
+a:hover{ color:Red; text-decoration:underline;}
+img{ border: 0px;}
+
+.footer {
+    text-align: center;
+    color: #15428B;
+    margin: 0px;
+    padding: 0px;
+    line-height: 23px;
+    font-weight: bold;
+}
+
+.tree {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
