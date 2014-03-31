@@ -22,47 +22,23 @@
                 return false;
             }
             //ajax提交
-            //$.ajax({
-            //    url: "Login/CheckUserLogin",
-            //    type: "POST",
-            //    dataType: "json",
-            //    data: { "Name": $("#UserName").val(), "Password": $("#Password").val() },
-            //    contentType: "application/json",
-            //    success: function (data) {
-            //        if (data.result == "success") {
-            //            window.location.href = "/Home/Index";
-            //        }
-            //        else {
-            //            alert(data.content);
-            //            window.location.href = "/Login/Login/";
-            //        }
-            //    },
-            //    error: function (xhr, error, ex) {
-            //        alert("出现错误，请稍后再试，带来不便，敬请谅解");
-            //        window.location.href = "/Login/Login/";
-            //    }
-            //});
-
-            //ajax提交
             $.ajax({
                 url: "Login/CheckUserLogin",
-                type: "GET",
-                //dataType: "json",
+                type: "POST",
+                dataType: "json",
                 data: { "Name": $("#UserName").val(), "Password": $("#Password").val() },
-                //contentType: "application/json",
                 success: function (data) {
-                    if (data == "success") {
+                    if (data.result == "success") {
                         window.location.href = "/Home/Index";
                     }
                     else {
-                        alert(data);
+                        alert(data.content);
                         window.location.href = "/Login/Login/";
                     }
                 },
                 error: function (xhr, error, ex) {
-                    alert(ex);
-                    //alert("出现错误，请稍后再试，带来不便，敬请谅解");
-                    //window.location.href = "/Login/Login/";
+                    alert("出现错误，请稍后再试，带来不便，敬请谅解");
+                    window.location.href = "/Login/Login/";
                 }
             });
         }
