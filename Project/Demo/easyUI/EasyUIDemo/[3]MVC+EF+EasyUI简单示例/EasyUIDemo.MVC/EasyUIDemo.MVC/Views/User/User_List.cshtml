@@ -7,11 +7,105 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>new_list</title>
+    <title>用户管理</title>
+    <link href="../../Content/EasyUI/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../../Content/EasyUI/themes/icon.css" rel="stylesheet" />
+    <link href="../../Content/admin.css" rel="stylesheet" />
+    <script src="../../Content/EasyUI/jquery.min.js"></script>
+    <script src="../../Content/EasyUI/jquery.easyui.min.js"></script>
+    <script src="../../Content/EasyUI/locale/easyui-lang-zh_CN.js"></script>
 </head>
 <body>
-    <div>
-        
+    <div id="tb" style="padding: 5px; height: auto">
+        <div style="margin-bottom: 5px">
+            <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true">添加</a>
+            <a href="#" class="easyui-linkbutton" iconcls="icon-edit" plain="true">修改</a>
+            <a href="#" class="easyui-linkbutton" iconcls="icon-cut" plain="true">删除</a>
+            <a href="#" class="easyui-linkbutton" iconcls="icon-arrow_refresh" plain="true">刷新</a>
+        </div>
+        <div>
+            Date From:
+            <input class="easyui-datebox" style="width: 80px">
+            To:
+            <input class="easyui-datebox" style="width: 80px">
+            Language: 
+			<select class="easyui-combobox" panelheight="auto" style="width: 100px">
+                <option value="java">Java</option>
+                <option value="c">C</option>
+                <option value="basic">Basic</option>
+                <option value="perl">Perl</option>
+                <option value="python">Python</option>
+            </select>
+            <a href="#" class="easyui-linkbutton" iconcls="icon-search">Search</a>
+        </div>
     </div>
+    <table id="dg" class="easyui-datagrid" title=""
+        data-options="rownumbers:true,singleSelect:true,autoRowHeight:false,pagination:true,
+				pageSize:10,toolbar:'#tb'">
+        <thead>
+            <tr>
+                <th field="inv" width="80">Inv No</th>
+                <th field="date" width="100">Date</th>
+                <th field="name" width="80">Name</th>
+                <th field="amount" width="80" align="right">Amount</th>
+                <th field="price" width="80" align="right">Price</th>
+                <th field="cost" width="100" align="right">Cost</th>
+                <th field="note" width="110">Note</th>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        function getData() {
+            var rows = [];
+            for (var i = 1; i <= 800; i++) {
+                var amount = Math.floor(Math.random() * 1000);
+                var price = Math.floor(Math.random() * 1000);
+                rows.push({
+                    inv: 'Inv No ' + i,
+                    date: $.fn.datebox.defaults.formatter(new Date()),
+                    name: 'Name ' + i,
+                    amount: amount,
+                    price: price,
+                    cost: amount * price,
+                    note: 'Note ' + i
+                });
+            }
+            return rows;
+        }
+
+        function pagerFilter(data) {
+            if (typeof data.length == 'number' && typeof data.splice == 'function') {	// is array
+                data = {
+                    total: data.length,
+                    rows: data
+                }
+            }
+            var dg = $(this);
+            var opts = dg.datagrid('options');
+            var pager = dg.datagrid('getPager');
+            pager.pagination({
+                onSelectPage: function (pageNum, pageSize) {
+                    opts.pageNumber = pageNum;
+                    opts.pageSize = pageSize;
+                    pager.pagination('refresh', {
+                        pageNumber: pageNum,
+                        pageSize: pageSize
+                    });
+                    dg.datagrid('loadData', data);
+                }
+            });
+            if (!data.originalRows) {
+                data.originalRows = (data.rows);
+            }
+            var start = (opts.pageNumber - 1) * parseInt(opts.pageSize);
+            var end = start + parseInt(opts.pageSize);
+            data.rows = (data.originalRows.slice(start, end));
+            return data;
+        }
+
+        $(function () {
+            $('#dg').datagrid({ loadFilter: pagerFilter }).datagrid('loadData', getData());
+        });
+    </script>
 </body>
 </html>

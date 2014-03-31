@@ -29,6 +29,8 @@
                 data: { "Name": $("#UserName").val(), "Password": $("#Password").val() },
                 success: function (data) {
                     if (data.result == "success") {
+                        //window.location.href = "Home/GetView?viewPara=Index";
+                        //window.location.href = "@Url.Content("/Home/Index/")";
                         window.location.href = "/Home/Index";
                     }
                     else {
@@ -46,7 +48,7 @@
 </head>
 <body>
     <div id="AddUserDialog" class="easyui-dialog" style="width: 300px; height: 150px; padding: 10px 20px"
-        modal="true" closable="false" title="用户登录" buttons="#dlg-buttons" align="center">
+        modal="true" closable="false" title="EasyUIDemo用户登录" buttons="#dlg-buttons" align="center">
         <form id="ff">
             <table id="tblAdd">
                 <tr>

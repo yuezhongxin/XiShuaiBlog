@@ -14,6 +14,10 @@ namespace EasyUIDemo.MVC.Controllers
         {
             return View();
         }
+        public ActionResult Home()
+        {
+            return View();
+        }
         /// <summary>
         /// iframe获取视图
         /// </summary>
