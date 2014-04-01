@@ -1874,9 +1874,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\User_Add.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\User\User_List.cshtml" />
   </ItemGroup>
   <ItemGroup>
