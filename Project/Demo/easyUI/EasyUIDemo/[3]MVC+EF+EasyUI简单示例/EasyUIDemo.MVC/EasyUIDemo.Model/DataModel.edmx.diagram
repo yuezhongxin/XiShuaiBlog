@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a87edfd54fa4428f896f09504f50c1c4" Name="关系图1">
-        <EntityTypeShape EntityType="EasyUIDemoDBModel.UserInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyUIDemoDBModel.UserInfo" Width="1.5" PointX="0.083848105782572235" PointY="6.7537533970334351" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -14,98 +14,358 @@
     <script src="../../Content/EasyUI/jquery.min.js"></script>
     <script src="../../Content/EasyUI/jquery.easyui.min.js"></script>
     <script src="../../Content/EasyUI/locale/easyui-lang-zh_CN.js"></script>
-</head>
-<body>
-    <div id="tb" style="padding: 5px; height: auto">
-        <div style="margin-bottom: 5px">
-            <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true">添加</a>
-            <a href="#" class="easyui-linkbutton" iconcls="icon-edit" plain="true">修改</a>
-            <a href="#" class="easyui-linkbutton" iconcls="icon-cut" plain="true">删除</a>
-            <a href="#" class="easyui-linkbutton" iconcls="icon-arrow_refresh" plain="true">刷新</a>
-        </div>
-        <div>
-            Date From:
-            <input class="easyui-datebox" style="width: 80px">
-            To:
-            <input class="easyui-datebox" style="width: 80px">
-            Language: 
-			<select class="easyui-combobox" panelheight="auto" style="width: 100px">
-                <option value="java">Java</option>
-                <option value="c">C</option>
-                <option value="basic">Basic</option>
-                <option value="perl">Perl</option>
-                <option value="python">Python</option>
-            </select>
-            <a href="#" class="easyui-linkbutton" iconcls="icon-search">Search</a>
-        </div>
-    </div>
-    <table id="dg" class="easyui-datagrid" title=""
-        data-options="rownumbers:true,singleSelect:true,autoRowHeight:false,pagination:true,
-				pageSize:10,toolbar:'#tb'">
-        <thead>
-            <tr>
-                <th field="inv" width="80">Inv No</th>
-                <th field="date" width="100">Date</th>
-                <th field="name" width="80">Name</th>
-                <th field="amount" width="80" align="right">Amount</th>
-                <th field="price" width="80" align="right">Price</th>
-                <th field="cost" width="100" align="right">Cost</th>
-                <th field="note" width="110">Note</th>
-            </tr>
-        </thead>
-    </table>
     <script>
-        function getData() {
-            var rows = [];
-            for (var i = 1; i <= 800; i++) {
-                var amount = Math.floor(Math.random() * 1000);
-                var price = Math.floor(Math.random() * 1000);
-                rows.push({
-                    inv: 'Inv No ' + i,
-                    date: $.fn.datebox.defaults.formatter(new Date()),
-                    name: 'Name ' + i,
-                    amount: amount,
-                    price: price,
-                    cost: amount * price,
-                    note: 'Note ' + i
+        $(function () {
+            initTable();
+            BindAddUserClickEvent();
+            BindUpdateUserClickEvent();
+        });
+
+        //初始化表格 
+        function initTable() {
+            $('#test').datagrid({
+                title: '用户列表',
+                iconCls: 'icon-user',
+                loadMsg: '数据加载中...',
+                nowrap: true,
+                autoRowHeight: true,
+                striped: true,
+                url: '/User/GetAllUserInfo',
+                sortName: 'ID',
+                sortOrder: 'asc',
+                border: true,
+                remoteSort: false,
+                idField: 'ID',
+                pageSize:10,
+                pagination: true,
+                rownumbers: true,
+                columns: [[
+                    { field: 'ck', checkbox: true },
+					{ field: 'ID', title: 'ID', width: 50, sortable: true },
+					{ field: 'Name', title: '用户名', width: 100, sortable: true },
+                    { field: 'Phone', title: "电话", width: 150, sortable: true },
+                    { field: 'Password', title: "密码", width: 150, sortable: true },
+                    { field: 'Mail', title: "EMail", width: 150, sortable: true },
+                    {
+                        field: 'CreateTime', title: "添加时间", width: 150, sortable: true,
+                        formatter: function (value, row, index) {
+                            //return (eval(value.replace(/\/Date\((\d+)\)\//gi, "new Date($1)"))).pattern("yyyy-M-d h:m:s");
+                        }
+                    },
+                    { field: 'Address', title: "地址", width: 250, sortable: true },
+                    {
+                        title: '是否启用', field: 'Enable', width: 80, formatter: function (val, rowdata, index) {
+                            if (val) {
+                                return '<a class="grid_Enable" href="javascript:void(0)" >' + val + '</a>';
+                            } else {
+                                return '<a class="grid_unEnable" href="javascript:void(0)" >' + val + '</a>';
+                            }
+                        }
+                    }                ]],
+                onLoadSuccess: function () {
+                    $(".grid_Enable").linkbutton({ text: '启用', plain: true, iconCls: 'icon-ok' });
+                    $(".grid_unEnable").linkbutton({ text: '禁止', plain: true, iconCls: 'icon-stop' });
+                },
+                toolbar: [{
+                    id: 'btnadd',
+                    text: '添加用户',
+                    iconCls: 'icon-add',
+                    handler: function () {
+                        AddUserDialog();
+                    }
+                }, '-', {
+                    id: 'btnedit',
+                    text: '修改用户',
+                    iconCls: 'icon-edit',
+                    handler: function () {
+                        UpdateUserDialog();
+                    }
+                }, '-', {
+                    id: 'btncut',
+                    text: '删除用户',
+                    iconCls: 'icon-cut',
+                    handler: function () {
+                        DeleteUser();
+                    }
+                }, '-', {
+                    id: 'btnrefresh',
+                    text: '刷新',
+                    iconCls: 'icon-arrow_refresh',
+                    handler: function () {
+                        initTable();
+                    }
+                }]
+            });
+        }
+        //添加用户对话框
+        function AddUserDialog() {
+            $('#AddUserDialog').dialog('open').dialog('setTitle', '添加用户');
+            ClearText();
+        }
+        //添加用户添加事件
+        function BindAddUserClickEvent() {
+            $("#btnRegist").click(function () {
+                //验证所有的文本框是否通过用户的验证
+                var valid = $('#ff').form('validate');
+                if (valid == false) {
+                    return false;
+                }
+                var CBEnable = true;
+                if ($("#Enable").combobox('getValue')=="0") {
+                    CBEnable = false;
+                }
+
+                //创建传递的参数
+                var postdata = {
+                    Name: $("#Name").val(),
+                    Password: $("#Password").val(),
+                    Mail: $("#Mail").val(),
+                    Phone: $("#Phone").val(),
+                    Address: $("#Address").val(),
+                    Enable: CBEnable
+                };
+
+                //发送异步请求到后台保存用户数据
+                $.post("/User/AddUser", postdata, function (data) {
+                    if (data == "OK") {
+                        alert("添加成功");
+                        $('#AddUserDialog').dialog('close');
+                        $("#test").datagrid("reload");
+                    }
+                    else {
+                        alert("添加失败，请您检查");
+                    }
                 });
-            }
-            return rows;
+            });
         }
 
-        function pagerFilter(data) {
-            if (typeof data.length == 'number' && typeof data.splice == 'function') {	// is array
-                data = {
-                    total: data.length,
-                    rows: data
-                }
+        //修改用户对话框
+        function UpdateUserDialog() {
+            var UpdateUserInfoID = $("#test").datagrid("getSelections");
+            if (UpdateUserInfoID.length == 1) {
+                $("#UpdateUserDialog").dialog("open").dialog("setTitle", "修改用户信息");
+                BingDetails();
             }
-            var dg = $(this);
-            var opts = dg.datagrid('options');
-            var pager = dg.datagrid('getPager');
-            pager.pagination({
-                onSelectPage: function (pageNum, pageSize) {
-                    opts.pageNumber = pageNum;
-                    opts.pageSize = pageSize;
-                    pager.pagination('refresh', {
-                        pageNumber: pageNum,
-                        pageSize: pageSize
-                    });
-                    dg.datagrid('loadData', data);
+            else {
+                $.messager.alert("友情提示", "每次只能修改一行数据，你已经选择了<font color='red' size='6'>" + UpdateUserInfoID.length + "</font>行");
+            }
+        }
+
+        //获取用户信息绑定
+        function BingDetails() {
+            //首先获取选中的用户的ID
+            var CheckID = $("#test").datagrid("getSelections")[0].ID;
+
+            //使用异步的getJSON请求绑定前台传递过来的数据
+            $.getJSON("/User/GetBindDetails", { ID: CheckID }, function (date) {
+                $("#ID").val(CheckID);
+                $("#Name1").val(date.Name);
+                $("#Password1").val(date.Password);
+                $("#PasswordOK1").val(date.Password);
+                $("#Phone1").val(date.Phone);
+                $("#Mail1").val(date.Mail);
+                $("#Address1").val(date.Address);
+                alert(date.Enable);
+                if (date.Enable) {
+                    $('#Enable1').combobox('setValue', '1');
+                }
+                else {
+                    $('#Enable1').combobox('setValue', '0');
                 }
             });
-            if (!data.originalRows) {
-                data.originalRows = (data.rows);
-            }
-            var start = (opts.pageNumber - 1) * parseInt(opts.pageSize);
-            var end = start + parseInt(opts.pageSize);
-            data.rows = (data.originalRows.slice(start, end));
-            return data;
         }
 
-        $(function () {
-            $('#dg').datagrid({ loadFilter: pagerFilter }).datagrid('loadData', getData());
-        });
+        //修改用户绑定事件
+        function BindUpdateUserClickEvent() {
+            $("#btnUpdate").click(function () {
+                //首先判断前台的验证是否通过
+                var valid = $('#UpdateUserInfo').form('validate');
+                if (valid == false) {
+                    return false;
+                }
+
+                var CBEnable = true;
+                if ($("#Enable1").combobox('getValue') == "0") {
+                    CBEnable = false;
+                }
+
+                //创建传递的参数
+                var postdata = {
+                    ID: $("#ID1").val(),
+                    Name: $("#Name1").val(),
+                    Password: $("#Password1").val(),
+                    Mail: $("#Mail1").val(),
+                    Phone: $("#Phone1").val(),
+                    Address: $("#Address1").val(),
+                    Enable: CBEnable
+                };
+
+                //使用异步实现修改用户信息
+                $.post("/User/UpdateUser", postData, function (date) {
+                    if (date == "OK") {
+                        $("#UpdateUserDialog").dialog('close');
+                        $("#test").datagrid('reload');
+                    }
+                    else {
+                        alert("修改失败，请检查");
+                    }
+                });
+            });
+        }
+
+        //删除删除
+        function DeleteUser() {
+            //获取到用户选定ID
+            var deleteUserInfoID = $("#test").datagrid("getSelections");
+            //判断用户选择了多少条数据
+            // //异步将删除的ID发送到后台，后台删除之后，返回前台OK，前台刷新表格
+            if (deleteUserInfoID.length >= 1) {
+                var ids = "";   //1,2,3,4
+                for (var i = 0; i < deleteUserInfoID.length; i++) {
+                    ids += deleteUserInfoID[i].ID + ",";
+                }
+                //去掉最后的一个,
+                ids = ids.substring(0, ids.length - 1);
+
+                //遍历出删除用户的信息
+                var UNameList = "";
+                for (var i = 0; i < deleteUserInfoID.length; i++) {
+                    UNameList += deleteUserInfoID[i].UName + ",";
+                }
+                UNameList = UNameList.substring(0, UNameList.length - 1);
+                //发送异步请求删除数据
+                $.messager.confirm("删除信息", "您确认删除<font color='Red' size='3'>" + UNameList + "</font>用户吗？", function (DeleteUserInfo) {
+                    if (DeleteUserInfo) {
+                        $.post("/User/DeleteUser", { deleteUserInfoID: ids, UName: UNameList }, function (data) {
+                            if (data == "OK") {
+                                $.messager.alert("友情提示", "删除成功");
+                                $("#test").datagrid("reload");
+                                $("#test").datagrid("clearSelections");
+                            }
+                            else {
+                                $.messager.alert("友情提示", "删除失败:" + data);
+                            }
+                        });
+                    }
+                });
+            }
+            else {
+                $.messager.alert("友情提示", "请您选择要删除的数据");
+            }
+        }
+
+        //清空文本框中的值
+        function ClearText() {
+            $("#Name").val("");
+            $("#Password").val("");
+            $("#PasswordOK").val("");
+            $("#Mail").val("");
+            $("#Phone").val("");
+            $("#Address").val("");
+            $("#Enable").val("");
+            $('#Enable').combobox('setValue', '1');
+        }
     </script>
+</head>
+<body>
+    <div>
+        <table id="test"></table>
+    </div>
+    @*添加用户弹窗*@
+    <div id="AddUserDialog" class="easyui-dialog" style="width:360px;height:310px;padding:10px 20px"
+			closed="true" resizable="true" modal="true" buttons="#dlg-buttons" align="center">
+        <form id="ff" method="post" novalidate="novalidate">
+            <table id="tblAdd">
+                <tr>
+                    <td><label for="Name">用户名：</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="Name" name="Name" data-options="required:true,validType:'length[1,32]'" /></td>
+                </tr>
+                <tr>
+                    <td><label for="Password">密码：</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="Password" name="Password"  data-options="required:true,validType:'length[1,32]'" /></td>
+                </tr>
+                    <tr>
+                    <td><label for="PasswordOK">确认密码：</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="PasswordOK" name="PasswordOK" data-options="required:true" validType="equalTo['Password']" invalidMessage="两次输入密码不匹配" /></td>
+                </tr>
+                    <tr>
+                    <td><label for="Phone">电话：</label></td>
+                    <td><input class="easyui-numberbox" type="text" id="Phone" name="Phone" data-options="validType:'length[1,14]'" /></td>
+                </tr>
+                <tr>
+                    <td><label for="Mail">邮箱:</label></td>  
+                    <td><input class="easyui-validatebox" type="text" id="Mail" name="Mail" data-options="required:true,validType:'email'" /></td>
+                </tr>
+                <tr>
+                    <td><label for="Address">地址：</label></td>
+                    <td><textarea id="Address" name="Address" style="height:50px;"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Enable">启用：</label></td>
+                    <td><select id="Enable" name="Enable" class="easyui-combobox" panelHeight='auto'>
+		                    <option value="1">启用</option>
+		                    <option value="0">禁止</option>
+	                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center; padding-top:10px">
+                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnRegist" iconcls="icon-ok" >确定</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#AddUserDialog').dialog('close')">关闭</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    @*修改用户弹窗*@
+    <div id="UpdateUserDialog" class="easyui-dialog" style="width:360px;height:300px;padding:10px 20px"
+			closed="true" resizable="true" modal="true" buttons="#dlg-buttons" align="center">
+        <form id="UpdateUserInfo" method="post" novalidate="novalidate">
+            <table id="tblUpdate">
+                <tr>
+                    <td><label for="ID">ID:</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="ID" name="ID" readonly="true"/></td><td>
+                </tr>
+                <tr>
+                    <td><label for="Name">用户名：</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="Name1" name="Name" data-options="required:true,validType:'length[1,32]'" /></td>
+                </tr>
+                <tr>
+                    <td><label for="Password">密码：</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="Password1" name="Password"  data-options="required:true,validType:'length[1,32]'" /></td>
+                </tr>
+                    <tr>
+                    <td><label for="PasswordOK">确认密码：</label></td>
+                    <td><input class="easyui-validatebox" type="text" id="PasswordOK1" name="PasswordOK" data-options="required:true" validType="equalTo['Password']" invalidMessage="两次输入密码不匹配" /></td>
+                </tr>
+                    <tr>
+                    <td><label for="Phone">电话：</label></td>
+                    <td><input class="easyui-numberbox" type="text" id="Phone1" name="Phone" data-options="validType:'length[1,14]'" /></td>
+                </tr>
+                <tr>
+                    <td><label for="Mail">邮箱:</label></td>  
+                    <td><input class="easyui-validatebox" type="text" id="Mail1" name="Mail" data-options="required:true,validType:'email'" /></td>
+                </tr>
+                <tr>
+                    <td><label for="Address">地址：</label></td>
+                    <td><textarea id="Address1" name="Address" style="height:50px;"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Enable">启用：</label></td>
+                    <td><select id="Enable1" name="Enable" class="easyui-combobox" panelHeight='auto'>
+		                    <option value="1">启用</option>
+		                    <option value="0">禁止</option>
+	                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center; padding-top:10px">
+                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnUpdate" iconcls="icon-ok" >确定</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#UpdateUserDialog').dialog('close')">关闭</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
