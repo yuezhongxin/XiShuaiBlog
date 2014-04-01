@@ -20,7 +20,8 @@ namespace EasyUIDemo.Model
         public string Mail { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-        public Nullable<System.DateTime> CreateTime { get; set; }
+        public DateTime CreateTime { get; set; }
+        //public Nullable<System.DateTime> CreateTime { get; set; }
         public bool Enable { get; set; }
     }
 }

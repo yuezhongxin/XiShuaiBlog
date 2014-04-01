@@ -11,11 +11,6 @@ namespace EasyUIDemo.MVC.Controllers
     {
         //
         // GET: /User/
-        public ActionResult User_Add()
-        {
-            return View();
-        }
-
         public ActionResult User_List()
         {
             return View();

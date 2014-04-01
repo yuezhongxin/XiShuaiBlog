@@ -104,7 +104,7 @@
         }
         //添加用户添加事件
         function BindAddUserClickEvent() {
-            $("#btnRegist").click(function () {
+            $("#btnAddUser").click(function () {
                 //验证所有的文本框是否通过用户的验证
                 var valid = $('#ff').form('validate');
                 if (valid == false) {
@@ -272,7 +272,7 @@
         <table id="test"></table>
     </div>
     @*添加用户弹窗*@
-    <div id="AddUserDialog" class="easyui-dialog" style="width:360px;height:310px;padding:10px 20px"
+    <div id="AddUserDialog" class="easyui-dialog" style="width:360px;height:340px;padding:10px 20px"
 			closed="true" resizable="true" modal="true" buttons="#dlg-buttons" align="center">
         <form id="ff" method="post" novalidate="novalidate">
             <table id="tblAdd">
@@ -310,7 +310,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:center; padding-top:10px">
-                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnRegist" iconcls="icon-ok" >确定</a>
+                        <a href="javascript:void(0)" class="easyui-linkbutton" id="btnAddUser" iconcls="icon-ok" >确定</a>
                         <a href="javascript:void(0)" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#AddUserDialog').dialog('close')">关闭</a>
                     </td>
                 </tr>
@@ -318,7 +318,7 @@
         </form>
     </div>
     @*修改用户弹窗*@
-    <div id="UpdateUserDialog" class="easyui-dialog" style="width:360px;height:300px;padding:10px 20px"
+    <div id="UpdateUserDialog" class="easyui-dialog" style="width:360px;height:340px;padding:10px 20px"
 			closed="true" resizable="true" modal="true" buttons="#dlg-buttons" align="center">
         <form id="UpdateUserInfo" method="post" novalidate="novalidate">
             <table id="tblUpdate">
