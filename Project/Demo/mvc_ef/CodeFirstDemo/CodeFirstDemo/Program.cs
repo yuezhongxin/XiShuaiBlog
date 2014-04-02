@@ -50,6 +50,7 @@ namespace CodeFirstDemo
     public class NewType
     {
         public int NewTypeId { get; set; }
+        //[MaxLength(50), System.ComponentModel.DataAnnotations.Schema.Column("Name")]//Names列名修改为Name，数据不变
         [MaxLength(50)]
         public string Name { get; set; }
 

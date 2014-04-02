@@ -56,6 +56,30 @@
     <Compile Include="Migrations\201403290930423_Update-NewType-Name.Designer.cs">
       <DependentUpon>201403290930423_Update-NewType-Name.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201404020715040_NewType.cs" />
+    <Compile Include="Migrations\201404020715040_NewType.Designer.cs">
+      <DependentUpon>201404020715040_NewType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404020727450_NewType1.cs" />
+    <Compile Include="Migrations\201404020727450_NewType1.Designer.cs">
+      <DependentUpon>201404020727450_NewType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404020728287_NewType2.cs" />
+    <Compile Include="Migrations\201404020728287_NewType2.Designer.cs">
+      <DependentUpon>201404020728287_NewType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404020739216_NewType3.cs" />
+    <Compile Include="Migrations\201404020739216_NewType3.Designer.cs">
+      <DependentUpon>201404020739216_NewType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404020740272_NewType4.cs" />
+    <Compile Include="Migrations\201404020740272_NewType4.Designer.cs">
+      <DependentUpon>201404020740272_NewType4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404020744031_NewType5.cs" />
+    <Compile Include="Migrations\201404020744031_NewType5.Designer.cs">
+      <DependentUpon>201404020744031_NewType5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +94,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201403290930423_Update-NewType-Name.resx">
       <DependentUpon>201403290930423_Update-NewType-Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404020715040_NewType.resx">
+      <DependentUpon>201404020715040_NewType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404020727450_NewType1.resx">
+      <DependentUpon>201404020727450_NewType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404020728287_NewType2.resx">
+      <DependentUpon>201404020728287_NewType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404020739216_NewType3.resx">
+      <DependentUpon>201404020739216_NewType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404020740272_NewType4.resx">
+      <DependentUpon>201404020740272_NewType4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404020744031_NewType5.resx">
+      <DependentUpon>201404020744031_NewType5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
