@@ -6,3 +6,5 @@ code first学习：
 	3，vs2012 安装EntityFramework
 		如果创建项目是framework4.0以下版本，会安装出现错误
 	4，code first配置连接字符串：http://msdn.microsoft.com/zh-cn/data/jj556606.aspx
+
+泛型学习：http://msdn.microsoft.com/zh-cn/library/0zk36dx2%28v=vs.80%29.aspx
