@@ -1,0 +1,13 @@
+                                       约束                                                                  说明
+
+                                where T:struct                                     使用结构约束，类型T必须是值类型
+
+                                where T:calss                                       类约束指定，类型T必须是引用类型
+
+                                where T:IFoo                                            指定类型T必须执行结构IFoo
+
+                                where T:Foo                                            指定类型T必须派生于基类Foo
+
+                               where T:new()                                       指定类型T必须有一个默认构造函数 
+
+                                 where T:U                                          类型T派生于泛型类型V（裸类型约束）
