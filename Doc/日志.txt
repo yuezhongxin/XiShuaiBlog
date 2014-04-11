@@ -12,3 +12,5 @@ code first学习：
 
 Web API:http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 	http://www.asp.net/web-api/overview/extensibility/using-the-web-api-dependency-resolver
+
+使用 Async 和 Await 的异步编程:http://msdn.microsoft.com/zh-cn/library/hh191443.aspx
