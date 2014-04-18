@@ -18,6 +18,7 @@ obj
 bin
 packages
 *.suo
+*.pdb
 /Project/Demo/cmsExpress/packages
 <<<<<<< HEAD
 /Project/Demo/cmsExpress/cmsExpress.v11.suo
