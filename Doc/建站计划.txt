@@ -67,7 +67,7 @@
 2014-04-21-------2014-04-27
 1，学习.Net中Repository概念
 2，学习Entity Framework之领域驱动设计实践-系列
-3，在实体框架使用T4模板
+3，Dto，Automapper
 4，道德经
 （完成：
   补充：
