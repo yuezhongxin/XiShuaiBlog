@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiShuaiUI", "XiShuaiUI\XiShuaiUI.csproj", "{1129DD64-C5A7-4DC2-A3E3-0B9F2ACA09BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XiShuaiBlogUI", "XiShuaiBlogUI\XiShuaiBlogUI.csproj", "{1129DD64-C5A7-4DC2-A3E3-0B9F2ACA09BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
