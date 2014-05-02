@@ -200,10 +200,10 @@
     <Content Include="_footer.html" />
     <Content Include="_header.html" />
     <Content Include="_nav.html" />
-    <Content Include="_shangxia1.html" />
+    <Content Include="_movetop1.html" />
     <Content Include="_sider1.html" />
     <Content Include="_sider2.html" />
-    <Content Include="_shangxia2.html" />
+    <Content Include="_movetop2.html" />
     <Content Include="ideal.html" />
     <Content Include="music.html" />
     <Content Include="movie.html" />
