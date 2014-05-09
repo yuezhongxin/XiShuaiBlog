@@ -81,9 +81,7 @@
  ）
 
 2014-05-05-------2014-05-11
-1，学习Entity Framework之领域驱动设计实践-系列
-2，初步要对XiShuaiBlog有个框架想法
-3，Automapper
+1，Entity Framework结合Automapper
 （完成：
   补充：
  ）
