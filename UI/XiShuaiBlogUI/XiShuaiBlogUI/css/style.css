@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 /*
 Name: xishuai
-URI: www.yuezhongxin.com
+URI: www.xishuaiblog.com
 */
 
 /*	--------------------------------------------------
@@ -54,7 +54,7 @@ strong.logo a, strong.logo a:hover {background:url(../images/logo.jpg) no-repeat
 .bcrumbs a.last { color:#BC0808;}
 .caterss {float: right;height: 32px;line-height: 32px;width:64px;padding:0 0 0 20px;background:url(../images/rss_icon.jpg) no-repeat 0 9px;font-size:13px;}
 .caterss a{color:#333;}
-.share {float: right;height: 32px;line-height: 32px;width:210px;}
+.share {float: right;width:210px;padding: 9px 0px 0px 0px;}
 
 /*---box--*/
 .con_box{border:1px #dbdbdb solid;background:#fff;margin-bottom:10px;}
