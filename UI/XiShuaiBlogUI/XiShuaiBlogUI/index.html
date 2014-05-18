@@ -11,6 +11,9 @@
     <link rel="alternate" type="application/atom+xml" title="蟋蟀 Atom Feed" href="http://www.xishuaiblog.com/feed/atom" />
     <link rel="pingback" href="http://www.xishuaiblog.com/xmlrpc.php" />
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/canvas_js/jquery.js"></script>
+    <script type="text/javascript" src="js/canvas_js/cube.js"></script>
+    <script type="text/javascript" src="js/canvas_js/canvasShow.js"></script>
     <!--[if IE 6]>
 	<link href="css/ie6.css" rel="stylesheet" type="text/css" />
 	<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
@@ -19,6 +22,7 @@
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.xishuaiblog.com/wp-includes/wlwmanifest.xml" />
 </head>
 <body>
+    <canvas style="display: block; top: 50px; left: 420px;" height="100" width="600" id="cas">抱歉，您的浏览器不支持canvas</canvas>
     <div id="div_main">
         <!-- top strip #end -->
         <div id="header">
@@ -38,7 +42,7 @@
                                 <h2><span class="date fr">4,092<small> ℃ </small>| 2014-04-14</span> <span class="zhiding">[置顶]</span><a href="details.html" rel="bookmark" title="详细阅读 程序员的人性思考（续）"> 程序员的人性思考（续）</a>			</h2>
                             </li>
                             <li>
-                                <h2><span class="date fr">6,792 <small> ℃ </small>| 2014-05-08</span> <span class="zhiding">[置顶]</span><a href="http://www.cnblogs.com/xishuai/p/3712361.html" rel="bookmark" title="恋爱虽易，相处不易：当EntityFramework爱上AutoMapper"> 恋爱虽易，相处不易：当EntityFramework爱上AutoMapper</a>			</h2>
+                                <h2><span class="date fr">6,792 <small>℃ </small>| 2014-05-08</span> <span class="zhiding">[置顶]</span><a href="http://www.cnblogs.com/xishuai/p/3712361.html" rel="bookmark" title="恋爱虽易，相处不易：当EntityFramework爱上AutoMapper"> 恋爱虽易，相处不易：当EntityFramework爱上AutoMapper</a>			</h2>
                             </li>
                         </ul>
                     </div>
@@ -310,5 +314,45 @@
             <script type="text/javascript">$('#shangxia').load('_movetop1.html');</script>
         </div>
     </div>
+    <script>
+        var canvas = document.getElementById("cas"),
+			ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        window.RAF = (function () {
+            return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) { window.setTimeout(callback, 1000 / 60); };
+        })();
+        var time = 0, stopTotop = false;
+        var stage = {
+            init: function () {
+                time = new Date();
+                part_1.init();
+                part_2.init();
+            },
+            update: function () {
+                var nt = new Date();
+                part_1.update(nt - time);
+                time = nt;
+            },
+            loop: function () {
+                var _this = this;
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+                this.update();
+                RAF(function () {
+                    _this.loop();
+                })
+            }
+        }
+
+        if (getCookie('isCanvas') != "1") {
+            addCookie("isCanvas", "1", 1);
+            //控制效果开始
+            stage.init();
+            stage.loop();
+        }
+        else {
+            $("#cas").hide();
+        }
+    </script>
 </body>
 </html>
