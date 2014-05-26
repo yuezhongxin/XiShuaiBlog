@@ -1,0 +1,17 @@
+1,命名法：
+	匈牙利命名法：通过在变量名前面加上相应的小写字母的符号标识作为前缀，标识出变量的作用域，类型等。如:a  数组 (Array) 
+	骆驼命名法：指混合使用大小写字母来构成变量和函数的名字。如：printEmployeePaychecks()；print_employee_paychecks()；
+	帕斯卡（pascal）命名：首字母大写。如：UserName
+2，面向过程强调的是“吃”，“人”只是一个参数；面向对象强调的是“人”，“吃”只是一个动作。
+3，如果你代码能做到以下几点，那么你就正在OOD：
+	面向对象
+	复用
+	能以最小的代价满足变化
+	不用改变现有代码满足扩展
+3，SOLID的5原则
+	S = 单一职责原则 Single Responsibility Principle
+	O = 开放闭合原则 Opened Closed Principle 
+	L = Liscov替换原则 Liscov Substitution Principle
+	I = 接口隔离原则 Interface Segregation Principle
+	D = 依赖倒置原则 Dependency Inversion Principle、
+4，声明一个事件不过类似于声明一个进行了封装的委托类型的变量而已。
